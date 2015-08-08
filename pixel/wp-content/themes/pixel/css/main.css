@@ -4732,7 +4732,11 @@ ul.comments li ul.children div.comment {
     color: #999999;
 	font-size:13px;
 }
-
+.widget-title a{
+	font-size:16px;
+	text-decoration: none;
+	color:#343434;
+}
 .catList li a:hover,.meta li a:hover, .tagsList li a:hover , .widget ul li a:hover, .tagcloud a:hover{
 	color:#343434;
 }
@@ -5972,4 +5976,9 @@ td, th {
   border: 1px solid #ccc; 
   text-align: left; 
 }
-
+td#today {
+	color:#EEA915;
+}
+td>a{
+	color:black;
+}
