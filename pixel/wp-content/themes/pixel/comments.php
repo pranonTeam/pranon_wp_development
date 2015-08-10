@@ -21,7 +21,7 @@ if (post_password_required ()) {
 ?>
 
 <?php if ( have_comments() ) : ?>
-<div class="comments">
+<div class="comments" id="comments">
 	<h2 class="comments-title">
 		<span><?php
 	comments_number ( 'No Comment', '1 Comments', '% Comments' );

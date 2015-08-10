@@ -63,7 +63,8 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 			<!--Post meta-->
 			<div class="postMeta ofsTSmall ofsBSmall">
 				<span class="metaCategory"><a href="#"><?php echo $cat;?> </a></span>
-				<span class="metaDate"><a href="#"> - <?php echo get_the_time(get_option( 'date_format' ));?> - </a></span>
+				<span class="metaDate"><a
+					href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))?>"> - <?php echo get_the_time(get_option( 'date_format' ));?> - </a></span>
 				<span class="metaComments"><a href="#comments"><?php comments_number('0  Comment', '1  Comment', '%  Comments' );?></a></span>
 			</div>
 			<!--End post meta-->
@@ -175,7 +176,17 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 							<?php echo get_the_post_thumbnail(get_the_ID(),'single_post',false);?>
 						</div>
 						<?php }?>
-						<?php echo get_the_content();?>
+						<?php
+				echo get_the_content ();
+				wp_link_pages ( array (
+						'before' => '<div class="page-links"><span class="page-links-title">' . __ ( 'Pages:', 'gilas' ) . '</span>',
+						'after' => '</div>',
+						'link_before' => '<span>',
+						'link_after' => '</span>',
+						'pagelink' => '<span class="screen-reader-text">' . __ ( 'Page', 'gilas' ) . ' </span>%',
+						'separator' => '<span class="screen-reader-text">, </span>' 
+				) );
+				?>
 
 						<div class="tagsSingle clearfix">
 								<h4>
@@ -229,6 +240,7 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 <?php
 if (comments_open () || get_comments_number ()) :
 	comments_template ();
+
 
 	
 endif;

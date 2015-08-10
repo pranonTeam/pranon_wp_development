@@ -110,7 +110,7 @@ class AfterSetupTheme {
 		/**
 		 * ******** WP TITLE FILTER ***********
 		 */
-		// add_filter ( 'wp_title', 'AfterSetupTheme::pranon_wp_title', 10, 2 );
+		add_filter ( 'wp_title', 'AfterSetupTheme::pranon_wp_title', 10, 2 );
 		add_filter ( 'image_size_names_choose', 'AfterSetupTheme::sgr_display_image_size_names_muploader', 11, 1 );
 		add_filter ( 'wp_list_categories', 'AfterSetupTheme::add_span_cat_count' );
 		add_filter ( 'get_archives_link', 'AfterSetupTheme::add_span_arch_count' );
@@ -155,7 +155,7 @@ class AfterSetupTheme {
 		if (is_feed ()) {
 			return $title;
 		}
-		$sep = '-';
+		
 		global $page, $paged, $post;
 		
 		// Add the blog name

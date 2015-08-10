@@ -2,8 +2,7 @@
 defined ( 'ABSPATH' ) or die ( "No script kiddies please!" );
 
 get_header ();
-?>
-<?php get_template_part ( 'menu-section' );?>
+get_template_part ( 'menu-section' );?>
 <!--Header single-->
 <section class="headerSingle hSingleHeight overlay tCenter" style="background-image: url('<?php echo get_template_directory_uri()?>/images/teaserImages/r1.jpg');">
 
@@ -14,7 +13,7 @@ get_header ();
 		<!--Title-->
 		<div class="title light ofsBottom ">
 			<h1>
-				Our blog<span class="plus">+</span>
+				<?php echo wp_title('')?><span class="plus">+</span>
 			</h1>
 		</div>
 		<!--End title-->
