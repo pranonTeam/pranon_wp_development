@@ -16,7 +16,7 @@ foreach ( $getCat as $key => $value ) {
 $img = '';
 if (class_exists ( 'Dynamic_Featured_Image' )) {
 	global $dynamic_featured_image;
-	$featured_images = $dynamic_featured_image->get_all_featured_images ( $post->ID );
+	$featured_images = $dynamic_featured_image->get_all_featured_images ( get_the_ID() );
 	$upload_dir = wp_upload_dir ();
 	$img .= ' <div class="postMedia postSlider slider flexslider single"> <ul class="slides">';
 	foreach ( $featured_images as $key => $featured_image ) {
@@ -28,13 +28,13 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 			$attachment_dir = $upload_dir ['baseurl'];
 		}
 		
-		if (isset ( $img_src ['sizes'] ['recent_blogs'] ['file'] )) {
+		if (isset ( $img_src ['sizes'] ['single_post'] ['file'] )) {
 			$img .= '<li>
-				<img class="img-responsive" src="' . esc_url ( $attachment_dir . '/' . $img_src ['sizes'] ['recent_blogs'] ['file'] ) . '" alt="">
+				<img class="img-responsive" src="' . esc_url ( $attachment_dir . '/' . $img_src ['sizes'] ['single_post'] ['file'] ) . '" alt="">
 			</li>';
 		} else {
 			$img .= '<li>
-				<img class="img-responsive" src="' . esc_url ( $attachment_dir . '/' . $img_src ['sizes'] ['recent_blogs'] ['file'] ) . '" alt="">
+				<img class="img-responsive" src="' . esc_url ( $attachment_dir . '/' . $img_src ['sizes'] ['large'] ['file'] ) . '" alt="">
 			</li>';
 		}
 	}
@@ -62,7 +62,7 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 
 			<!--Post meta-->
 			<div class="postMeta ofsTSmall ofsBSmall">
-				<span class="metaCategory"><a href="#"><?php echo $cat;?> </a></span>
+				<span class="metaCategory"><?php echo $cat;?></span>
 				<span class="metaDate"><a
 					href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))?>"> - <?php echo get_the_time(get_option( 'date_format' ));?> - </a></span>
 				<span class="metaComments"><a href="#comments"><?php comments_number('0  Comment', '1  Comment', '%  Comments' );?></a></span>
@@ -125,7 +125,7 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 
 			<div class="eleven columns">
 				<!--Blog single details inner-->
-				<div class="pSingleDetailsInner tLeft columns margMTop">
+				<div class="pSingleDetailsInner tLeft  margMTop">
 
 
 					<!--Post author-->
@@ -223,18 +223,12 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 		</div>
 		<!--End container-->
 	</div>
-	<!--End blog single details-->
 
-
-
-	<!--Comments holder-->
 	<div class="commentsHolder middle bgGrey ofsTop ofsBottom">
 
 
-		<!--Container-->
 		<div class="container clearfix">
 
-			<!--Comments holder inner-->
 			<div class="commentsHolderInner middle thirteen tLeft columns ">
 
 <?php
@@ -247,17 +241,10 @@ endif;
 ?>
 
 			</div>
-			<!--End comments holder inner-->
 
 		</div>
-		<!--End container-->
-
 
 	</div>
-	<!--End comments holder-->
-
-
 
 </section>
-<!--End project single-->
 <?php get_footer();?>

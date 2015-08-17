@@ -435,7 +435,8 @@ nav.mainNav ul ul ul{
 
 
 .slidesInner img{
-	width:20% !important;
+	/* width:20% !important; */
+	margin-top:-22px!important;
 }
 
 
@@ -566,8 +567,10 @@ nav.mainNav ul ul ul{
 }
 
 
-.aboutIntroContent h1 span{
+.aboutIntroContent h1 span, .aboutIntroContent h1 strong{
 	color:#eea915;
+	font-size: inherit;
+	font-weight: normal;
 }
 
 
@@ -735,11 +738,6 @@ h2.expTitle{
 	float:left;
 	position:relative;
 	overflow:hidden;
-	-moz-transform: scale(1.1)  ;
-	-webkit-transform: scale(1.1) ;
-	-o-transform: scale(1.1)  ;
-	transform: scale(1.1) ;
-	
 }
 
 .servImg.alt, .workImg.alt{
@@ -785,7 +783,7 @@ h2.expTitle{
     position: absolute;
     text-align: center;
     top: 50%;
-    width: 50%;
+    width: 100%;
     z-index: 1;
 }
 
@@ -797,8 +795,8 @@ h2.expTitle{
 
 
 .servSht, .worksSht{
-    width: 50%;
-	float:left;
+    /* width: 50%;
+	float:left; */
 	color:#ffffff;
 	overflow:hidden;
 	
@@ -807,16 +805,24 @@ h2.expTitle{
 .servBtn{
 	background:#2c2c2c;	
 }
-
+.shorten:hover .servImg {
+		-moz-transform: scale(1.1)  ;
+	-webkit-transform: scale(1.1) ;
+	-o-transform: scale(1.1)  ;
+	transform: scale(1.1) ;
+}
 .workBtn{
 	background:#eea915;	
 }
 
+.vc_row .vc_column_container:nth-child(even) .shortenBtn .servBtn{
+	background:#eea915;	
+}
 .servBtn, .workBtn {
     color: #ffffff;
-    float: left;
+   /*  float: left; */
     font-size: 50px;
-    width: 50%;
+   /*  width: 50%; */
 }
 
 .workBtn a, .servBtn a{
@@ -1292,7 +1298,7 @@ a.smore{
 
 
 .socials {
-	background: url(../images/parallaxBg/parallax3.jpg);
+	/* background: url(../images/parallaxBg/parallax3.jpg); */
 	background-attachment: fixed;
 	background-position: center top;
 	background-repeat: repeat-y;
@@ -4778,6 +4784,15 @@ ul.comments li ul.children div.comment {
 	-o-border-radius: 20px;
 	font-size: 13px!important;
 }
+.ftWidget .tagcloud a{
+	background: none;
+	padding: 6px 4px;
+	margin-top: 15px;
+	border-radius:0px;
+}
+.ftWidget .tagcloud a:hover{
+	color:inherit;
+}
 
 .widget abbr {
     border-bottom: 1px dotted #999999;
@@ -4897,10 +4912,13 @@ ul.comments li ul.children div.comment {
 }
 
 
-.feedTw ul.tweet_list li:last-child {
+.feedTw ul.tweet_list li {
 	display:none;	
 }
 
+.feedTw ul.tweet_list li:first-child {
+	display:block;	
+}
 
 .tweets .tweet_list li {
     font-size: 19px;
@@ -4958,7 +4976,7 @@ ul.comments li ul.children div.comment {
 }
 
 
-.instaTitle h3 span{
+.instaTitle h3 span, .instaTitle h3 strong{
 	margin-top:5px;
 	font-size:13px;
 	display:block;
@@ -5752,8 +5770,8 @@ span.arrow i{
 	.shorten .worksSht .inner{top:74%;}
 	.servSht, .worksSht{float:none; width:100%;}
 	.servBtn, .workBtn{position:absolute; z-index:10;width:100%;}
-	.servBtn{top:40%;}
-	.workBtn{top:90%;}
+	/* .servBtn{top:40%;}
+	.workBtn{top:90%;} */
 	.container .exp, .container .teamSingle, .shot img, .container .latest,  .container .fact, #accordionContent,.container .prc, .container .plan, .container .postLarge, .container .ftWidget, .container .servi2, .container .addAlt, .container .serviAlt, .container .new, .container .shipping{margin-bottom:50px;}
 	.container .exp:last-child, .container .teamSingle:last-child, .container .info:last-child, .container .fact:last-child, .container .prc:last-child, .container .plan:last-child,  .container .latest:last-child, .container .stp:last-child, .postLarge.last:last-child, .container .ftWidget:last-child, .container .servi2:last-child, .postLarge.last:last-child, .container .addAlt:last-child, .container .serviAlt:last-child{margin-bottom:0;}
 	.noGap{width:100% !important;}
@@ -5986,4 +6004,16 @@ td#today {
 }
 td>a{
 	color:black;
+}
+
+/* ======== JS COMPOSER ========= */
+.wpb_row{
+	margin-bottom: 0px!important;
+}
+.blog_mar_top{
+	margin-top:-20px;
+}
+
+.ftWidget:nth-child(3n+4) {  
+  clear:left;
 }

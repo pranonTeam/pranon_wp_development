@@ -6,13 +6,13 @@ class IncludeCssJs {
 		
 		$js = array (
 				'jquery-migrate' => 'jquery-migrate-1.2.1.js',
-				'flexslider' => 'jquery.flexslider-min.js',
+				'flexslider-theme' => 'jquery.flexslider-min.js',
 				'easing' => 'jquery.easing.1.3.js',
 				'smooth' => 'jquery.smooth-scroll.js',
 				'quicksand' => 'jquery.quicksand.js',
 				'modernizr' => 'modernizr.custom.js',
 				'magnific-popup' => 'jquery.magnific-popup.js',
-				'tweet' => 'jquery.tweet.js',
+				'tweet-theme' => 'jquery.tweet.js',
 				'spectragram' => 'spectragram.min.js',
 				'parallax' => 'jquery.parallax-1.1.3.js',
 				'timer' => 'jquery.timer.js',

@@ -52,7 +52,8 @@ class AfterSetupTheme {
 		 * *********** WIDGET INITIALIZ ***********
 		 */
 		add_action ( 'widgets_init', 'CreateSidebar::pranon_custom_sidebar' );
-		// add_action ( 'widgets_init', 'CreateSidebar::reg_footer_sidebar' );
+		add_action ( 'widgets_init', 'CreateSidebar::pranon_footer_sidebar' );
+		add_action( 'widgets_init', 'CreateSidebar::pranon_tweet_widget' );
 		
 		/**
 		 * ************* CUSTOM POST TYPE ************
@@ -75,8 +76,9 @@ class AfterSetupTheme {
 		/**
 		 * ******* SHORTCODE INITIALIZE ***********
 		 */
-		// add_action ( 'init', 'Shortcode_generator::pranon_register_shortcode' );
-		
+		//add_action ( 'init', 'Shortcode_generator::pranon_register_shortcode' );
+		/* add_filter( 'vc_grid_item_shortcodes', 'Visual_Composer::my_module_add_grid_shortcodes' ); */
+		add_action( 'vc_before_init', 'Visual_Composer::add_shortcode_to_VC' );
 		/**
 		 * ************** ADMIN INITIALIZE **********
 		 */

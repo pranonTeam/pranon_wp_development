@@ -1,41 +1,47 @@
-<?php defined('ABSPATH') or die("No script kiddies please!"); ?>
+<?php
 
+defined ( 'ABSPATH' ) or die ( "No script kiddies please!" );
+?>
+<footer id="footer" class="footer tCenter">
+<?php
+get_sidebar ( "footer" );
+?>
 <!--Footer bottom-->
-<div class="footerBottom ofsT-Small ofsB-Small tLeft">
-	<!--Container-->
-	<div class="container clearfix">
+	<div class="footerBottom ofsT-Small ofsB-Small tLeft">
+		<!--Container-->
+		<div class="container clearfix">
 
-		<!--Footer bottom inner-->
-		<div class="fbInner clearfix">
+			<!--Footer bottom inner-->
+			<div class="fbInner clearfix">
 
-			<div class="eight columns ">
+				<div class="eight columns ">
 
-				<p>
-					Copyrights &copy; 2015 <span class="brand">PIXEL AGENCY</span> All
-					Rights Reserved.
-				</p>
+					<p>
+						Copyrights &copy; 2015 <span class="brand">PIXEL AGENCY</span> All
+						Rights Reserved.
+					</p>
+
+				</div>
+
+				<div class="eight columns ">
+
+					<ul class="socialsFooter ">
+
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-instagram"></i></a></li>
+						<li><a href="#"><i class="icon-vimeo"></i></a></li>
+
+					</ul>
+				</div>
 
 			</div>
-
-			<div class="eight columns ">
-
-				<ul class="socialsFooter ">
-
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin"></i></a></li>
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-vimeo"></i></a></li>
-
-				</ul>
-			</div>
-
+			<!--End footer bottom inner-->
 		</div>
-		<!--End footer bottom inner-->
+		<!--End container-->
 	</div>
-	<!--End container-->
-</div>
-<!--End footer bottom-->
+	<!--End footer bottom-->
 </footer>
 <!--End footer-->
 </div>

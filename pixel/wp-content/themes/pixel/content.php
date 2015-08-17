@@ -43,7 +43,7 @@ foreach ( $getCat as $key => $value ) {
 <?php if ( has_post_thumbnail() ) {?>
 			<!--Post image-->
 			<div class="postMedia">
-				 <?php echo get_the_post_thumbnail(get_the_ID(),'recent_blog',false)?>
+				 <?php echo get_the_post_thumbnail(get_the_ID(),'recent_blogs',false)?>
 			</div>
 			<!--End post image-->
 <?php }?>

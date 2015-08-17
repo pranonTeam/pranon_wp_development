@@ -39,7 +39,7 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 			</li>';
 		} else {
 			$img .= '<li>
-				<img class="img-responsive" src="' . esc_url ( $attachment_dir . '/' . $img_src ['sizes'] ['recent_blogs'] ['file'] ) . '" alt="">
+				<img class="img-responsive" src="' . esc_url ( $attachment_dir . '/' . $img_src ['sizes'] ['large'] ['file'] ) . '" alt="">
 			</li>';
 		}
 	}
