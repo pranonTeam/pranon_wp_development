@@ -1,7 +1,7 @@
 <?php defined('ABSPATH') or die("No script kiddies please!");?>
 
 <header id="header">
-<?php if (!is_front_page()) { $menuClass ='fixed'; }else $menuClass = 'default';?>
+<?php if (!is_front_page() && !is_page_template( 'forntpage.php' )) { $menuClass ='fixed'; }else $menuClass = 'default';?>
 	<!--Main header-->
 	<div class="mainHeader <?php echo $menuClass;?> mobile">
 		<!--Container-->

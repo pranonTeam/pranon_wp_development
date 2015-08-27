@@ -185,7 +185,7 @@ small {
 	.slidesInner.alt h1.alt, .slidesInner.personal h1.personal, .persIntro p,
 	.persWork h1, .persContact h1, .persFooter p, .content h1, .heroBInner  h1,
 	.planNameAlt h1, .ctTitle h1, .sbTitle h1, .countdown_show4 .countdown_section,
-	.reviewForRating h2, .footerV2 p, .persClients h1, .infoInner span,
+	.reviewForRating h2, .footerV2 p, .persClients h1, .infoInner span,.testiSlider li p,
 	.infoInner a ,.aboutIntroContent h1 strong{
 	font-family: 'robotolight', Arial, sans-serif;
 }
@@ -261,8 +261,7 @@ small {
 a, .errorForm, .contactForm #submit, .tactive span, .pagination ul li span,
 	.replyForm #submit, .shortFolio span, .shortContact span, .latest img,
 	.item img, .proj img, .prod img, .instaFeed li a:before, .servImg,
-	.workImg, ul.ftPost li a span, ul.catRecents li a span, .expIcoAlt,
-	.expIco, .heroBImg, .errImg, .cartBtnAction a span, .bannerImg,
+	.workImg, ul.ftPost li a span, ul.catRecents li a span, .expIcoAlt, .heroBImg, .errImg, .cartBtnAction a span, .bannerImg,
 	.reviewForm #submit, form.register #submit, form.existing #submit,
 	input#place_order, form.register #submit, form.existing #submit,
 	.woocommerce form #submit, input#place_order, input.coupon, input.checkout,
@@ -376,7 +375,7 @@ a.amore {
 	.socialsSlider li a, .postLarge.last, .servi, .add, .prcIco i, .addAlt,
 	.postLarge, .postNav ul li a, .insta, .contInfoInner, .factIco,
 	.factIcoInner, .tSocials li a, .testimonials.v2, .authorImg, .tSocials li a,
-	.testimonials, .clients, .socials {
+	.testimonials, .clients, .socials,input[type="email"] {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 }
@@ -545,7 +544,7 @@ a.amore {
 
 .noGap {
 	margin: 0 !important;
-	width: 200px !important;
+	width: 25% !important;
 }
 
 .noMRight {

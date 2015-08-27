@@ -18,7 +18,7 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 					'welcome_heading' => '' 
 			), $atts ) );
 			
-			$html = '<div class="aboutIntro bgGreyDark  ofsTop ofsBottom margLBottom">
+			$html = '<div class="aboutIntro bgGreyDark  ofsTop ofsBottom">
 					<div class="container clearfix">
 					<div class="title light ofsBMedium">
 						<h1>' . esc_html ( $welcome_heading ) . '<span class="plus">+</span></h1>

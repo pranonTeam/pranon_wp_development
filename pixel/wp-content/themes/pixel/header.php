@@ -17,7 +17,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
- <title><?php  wp_title( '-', true, 'right' ); ?></title>
+
 <!-- The favicon -->
 <!--[if IE 7]>
 <link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->

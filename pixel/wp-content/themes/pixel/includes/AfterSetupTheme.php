@@ -79,6 +79,11 @@ class AfterSetupTheme {
 		//add_action ( 'init', 'Shortcode_generator::pranon_register_shortcode' );
 		/* add_filter( 'vc_grid_item_shortcodes', 'Visual_Composer::my_module_add_grid_shortcodes' ); */
 		add_action( 'vc_before_init', 'Visual_Composer::add_shortcode_to_VC' );
+		add_shortcode_param( 'pranon_custom_taxonomy', 'Visual_Composer::pranon_param_settings_field' );
+		/* if (class_exists ( 'WPBakeryShortCode' )) {
+			$dir = get_stylesheet_directory() . '/vc_templates';
+			vc_set_shortcodes_templates_dir( $dir );
+		} */
 		/**
 		 * ************** ADMIN INITIALIZE **********
 		 */

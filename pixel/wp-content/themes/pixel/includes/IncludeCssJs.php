@@ -42,9 +42,9 @@ class IncludeCssJs {
 				'font.css' => 'font.css',
 				'fontello.css' => 'fontello.css',
 				'jquery-ui-1.8.23.custom.css' => 'jquery-ui-1.8.23.custom.css',
-				'base' => 'base.css',
 				'skeleton.css' => 'skeleton.css',
 				'main.css' => 'main.css',
+				'base' => 'base.css',
 				'magnific-popup.css' => 'magnific-popup.css',
 				'flexslider.css' => 'flexslider.css',
 				$css_file => $css_file . '.css' 

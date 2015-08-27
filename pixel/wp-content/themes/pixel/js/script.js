@@ -704,16 +704,56 @@
 
 	/* =========== css tweak for visual composer ============ */
 
-	jQuery('.what_we_do_column').parent().parent().parent().removeClass()
+	/*jQuery('.what_we_do_column').parent().parent().parent().removeClass('vc_row wpb_row vc_row-fluid')
 			.addClass('container clearfix margLBottom');
-	jQuery('.aboutIntroContent a').parent('p').css({
-		"margin" : "0 auto"
+	jQuery('.what_we_do_column_2').parent().parent().css({'padding':'0px'}).addClass('changeBg');
+	
+	
+	jQuery('div.ftWidget ul').addClass('ftPost');
+	jQuery('div.ftWidget ul.ftPost').find('a').append(' <span>&rarr;</span>');
+	jQuery('.pranon_team').parent().parent().parent().removeClass('vc_row wpb_row vc_row-fluid').addClass('container clearfix');
+	jQuery('.pixel_skill_exprties').parent().parent().parent().removeClass('vc_row wpb_row vc_row-fluid').addClass('container clearfix margMBottom expo_pixel');
+	jQuery('.pixel_skill_exprties').parent().parent().css({
+		'padding-left' : '0px',
+		'padding-right' : '0px'
 	});
+	jQuery('.pixel_fun_fact').parent().parent().css({
+		'padding-left' : '10px',
+		'padding-right' : '10px'
+	}).wrapAll('<div class="facts overlay tCenter ofsTopL ofsBottomL"><div class="container clearfix"> </div></div>');
+	
+	jQuery('.pixel_price_table').parent().parent().css({
+		'padding-left' : '10px',
+		'padding-right' : '10px'
+	}).wrapAll('<div class="pricingHolder  ofsTop ofsBottom"><div class="container clearfix"> </div></div>');
+
+	jQuery('.vc_tta-panels-container').parents('.wpb_column').wrapAll('<div class="container clearfix"> </div>');
+	jQuery('.vc_tta-panels-container').parents('.wpb_column').css({
+		'padding-left' : '10px',
+		'padding-right' : '10px'
+	});
+	jQuery('.additional_services').parents('.wpb_column').wrapAll('<div class="container clearfix"> </div>');
+	jQuery('.additional_services').parents('.wpb_column').css({
+		'padding-left' : '10px',
+		'padding-right' : '10px'
+	});*/
+	
+	
+	jQuery('div.ftWidget ul').addClass('ftPost');
+	jQuery('div.ftWidget ul.ftPost').find('a').append(' <span>&rarr;</span>');
 	jQuery('div.credentials').parent().parent().css({
 		'padding-left' : '0px',
 		'padding-right' : '0px'
-	}).addClass('margLBottom');
-	jQuery('div.ftWidget ul').addClass('ftPost');
-	jQuery('div.ftWidget ul.ftPost').find('a').append(' <span>&rarr;</span>');
+	});
+	jQuery('.aboutIntroContent a').parent('p').css({
+		"margin" : "0 auto"
+	});
+	jQuery('.what_we_do_column_2').parent().parent().css({'padding':'0px'}).addClass('changeBg');
 	
+	jQuery(".vc_parallax").each(function(){
+			var $height = jQuery(this).height();
+			jQuery(this).css({'height':$height});
+	    });
+	jQuery('div.tagsSingle ul').addClass('tagsListSingle');
+	jQuery('.infoHolder').parents('div.vc_row').addClass('ofsInTop ofsInBottom bgYellow');
 })(jQuery);

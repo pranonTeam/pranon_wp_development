@@ -29,7 +29,15 @@ get_template_part ( 'menu-section' );?>
 	<div class="blogPosts ">
 		<!--Post navigation-->
 		<div class="postNav ofsTop ofsBottom  bgGreyDark">
-<?php Navigation::pranon_paging_nav(); ?>
+<?php 	$paged = get_query_var ( 'paged' ) ? intval ( get_query_var ( 'paged' ) ) : 1;
+		$args = array (
+				'posts_per_page' => get_option ( 'posts_per_page' ),
+				'paged' => $paged
+		);
+		
+		query_posts ( $args );
+		
+		Navigation::pranon_paging_nav(); ?>
 		</div>
 		<!--End post navigation-->
 
@@ -37,13 +45,6 @@ get_template_part ( 'menu-section' );?>
 			<div class="container clearfix">
 				<div class="eleven columns noMRight">
 		<?php
-		$paged = get_query_var ( 'paged' ) ? intval ( get_query_var ( 'paged' ) ) : 1;
-		$args = array (
-				'posts_per_page' => get_option ( 'posts_per_page' ),
-				'paged' => $paged
-		);
-		
-		query_posts ( $args );
 		if (have_posts ()) :
 			
 			while ( have_posts () ) :

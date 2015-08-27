@@ -25,8 +25,8 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 			} else {
 				$para_html = '';
 			}
-			$html = '<div class="expertiseHolder">
-					<div class="container clearfix ofsBottom">
+			$html = '<div class="expertiseHolder margLTop">
+					<div class="clearfix ofsBottom">
 								<div class="title dark">
 									<h1>' . esc_html ( $what_we_do_heading ) . '<span class="plus">+</span></h1>
 								</div>

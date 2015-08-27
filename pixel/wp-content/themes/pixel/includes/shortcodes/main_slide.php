@@ -27,9 +27,11 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 				$images_html = '<ul class="slides">';
 				foreach ( $images as $single_image ) {
 					$src = wp_get_attachment_image_src ( $single_image, 'main_big_slide' );
-					$images_html .= '<li class="overlay"><img src="' . $src [0] . '" width="' . $src [1] . '" height="' . $src [2] . '"  alt=""/></li>';
+					$images_html .= '<li class="overlay"><img src="' . esc_url($src [0]) . '" width="' . esc_attr($src [1]) . '" height="' . esc_attr($src [2]) . '"  alt=""/></li>';
 				}
 				$images_html .= '</ul>';
+			}else{
+				$images_html='';
 			}
 			
 			$icons = explode ( ',', esc_html ( $social_icons ) );
@@ -38,10 +40,12 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 			if ($social_link != 'no') {
 				$social_html = '<ul class="socialsSlider">';
 				foreach ( $icons as $key => $icon ) {
-					$link = $links [$key] == null ? '#' : $links [$key];
+					$link = isset($links [$key]) ? $links [$key] : '#';
 					$social_html .= '<li><a href="' . esc_url ( $link ) . '"><i class="' . esc_attr ( $icon ) . '"></i></a></li> ';
 				}
 				$social_html .= '</ul>';
+			}else{
+				$social_html ='';
 			}
 			
 			$html = '<div class="mainSliderHolder">

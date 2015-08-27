@@ -29,13 +29,14 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 			}else{
 				$column_class = 'one-third';
 			}
+			
 			$args = array (
 					'posts_per_page' => $numberOfPost,
 					'offset' => 0,
 					'category' => '',
 					'category_name' => '',
-					'orderby' => $orderby,
-					'order' => $order,
+					'orderby' => $orderby!='' ? $orderby : 'date',
+					'order' => $order!='' ? $order : 'DESC',
 					'include' => '',
 					'exclude' => '',
 					'meta_key' => '',
