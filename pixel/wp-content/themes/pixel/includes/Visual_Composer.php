@@ -56,7 +56,6 @@ class Visual_Composer {
 								"class" => "",
 								"heading" => __ ( "Images", "pranon" ),
 								"param_name" => "slide_images",
-								"value" => __ ( "", "pranon" ),
 								"description" => __ ( "Images for slide", "pranon" ) 
 						),
 						array (
@@ -622,7 +621,6 @@ class Visual_Composer {
 								"class" => "",
 								"heading" => __ ( "Team Image", "pranon" ),
 								"param_name" => "team_img",
-								"value" => __ ( "", "pranon" ),
 								"description" => __ ( "Images for Team Member", "pranon" ) 
 						),
 						array (
@@ -862,7 +860,7 @@ class Visual_Composer {
 								"class" => "",
 								"heading" => __ ( "Images", "pranon" ),
 								"param_name" => "intro_img",
-								"value" => __ ( "", "pranon" ),
+								
 								"description" => __ ( "Images for slide", "pranon" )
 						)
 				)
@@ -1089,7 +1087,9 @@ class Visual_Composer {
 								"value" => array (
 										'',
 										'theme1',
-										'theme2'
+										'theme2',
+										'theme3',
+										'theme4'
 								),
 								"description" => __ ( "Choose a theme", "pranon" )
 						),
@@ -1121,7 +1121,7 @@ class Visual_Composer {
 				)
 		) );
 		/**
-		 * ******** ===================== ADDITIONAL SERVICES ===================== *************
+		 * ******** ===================== CUSTOM PAGE HEADING ===================== *************
 		 */
 		vc_map ( array (
 				"name" => __ ( "Pixel Custom Page Heading", "pranon" ),
@@ -1156,8 +1156,75 @@ class Visual_Composer {
 								"class" => "",
 								"heading" => __ ( "Image", "pranon" ),
 								"param_name" => "page_img",
-								"value" => __ ( "", "pranon" ),
-								"description" => __ ( "Images Like Logo, should no large", "pranon" ) 
+								
+								"description" => __ ( "Images Like Logo, should not large", "pranon" ) 
+						),
+						array (
+								"type" => "dropdown",
+								"class" => "",
+								"heading" => __ ( "Choose Theme", "pranon" ),
+								"param_name" => "theme_op",
+								"value" => array (
+										'',
+										'theme1',
+										'theme2'
+								),
+								"description" => __ ( "Choose a theme", "pranon" )
+						)
+						
+				)
+		) );
+		
+		/**
+		 * ******** ===================== SERVICES ===================== *************
+		 */
+		vc_map ( array (
+				"name" => __ ( "Pixel Services", "pranon" ),
+				"base" => "services",
+				"class" => "",
+				"category" => __ ( "Pixel", "pranon" ),
+				'admin_enqueue_js' => array (
+						get_template_directory_uri () . '/vc_extend/bartag.js'
+				),
+				'admin_enqueue_css' => array (
+						get_template_directory_uri () . '/vc_extend/bartag.css'
+				),
+				"params" => array (
+						array (
+								"type" => "textfield",
+								"holder" => "h3",
+								"class" => "",
+								"heading" => __ ( "Heading", "pranon" ),
+								"param_name" => "heading",
+								"description" => __ ( "Heading of particular Service", "pranon" )
+						),
+						array (
+								"type" => "textarea_html",
+								"holder" => "div",
+								"class" => "",
+								"heading" => __ ( "Content", "pranon" ),
+								"param_name" => "content",
+								"description" => __ ( "Content shows bellow the heading", "pranon" )
+						),
+						array (
+								"type" => "attach_image",
+								"class" => "",
+								"heading" => __ ( "Image", "pranon" ),
+								"param_name" => "img_url",
+								
+								"description" => __ ( "Image for specific service", "pranon" )
+						),
+						array (
+								"type" => "dropdown",
+								"class" => "",
+								"heading" => __ ( "Choose Image Position", "pranon" ),
+								"param_name" => "left_right",
+								"value" => array (
+										'',
+										'img_right',
+										'img_left'
+								),
+								"description" => __ ( "Choose image position", "pranon" )
 						)
 				)
 		) );
@@ -1179,7 +1246,7 @@ class Visual_Composer {
 						array (
 								"type" => "textfield",
 								"class" => "h3",
-								"heading" => __ ( "Form Icon Class", "pranon" ),
+								"heading" => __ ( "Icon Class", "pranon" ),
 								"param_name" => "contact_icon_class",
 								"description" => __ ( "Icon Class from <a href='http://fontello.com/'>fonttello</a>", "pranon" )
 						),
@@ -1222,25 +1289,82 @@ class Visual_Composer {
 				),
 				"params" => array (
 						array (
+								"type" => "dropdown",
+								"class" => "",
+								"heading" => __ ( "Choose Info Theme", "pranon" ),
+								"param_name" => "contact_theme",
+								"value" => array (
+										'',
+										'theme1',
+										'theme2'
+								),
+								"description" => __ ( "Choose image position", "pranon" )
+						),
+						array (
 								"type" => "textfield",
 								"class" => "h3",
 								"heading" => __ ( "Icon Class", "pranon" ),
 								"param_name" => "contact_icon_class",
-								"description" => __ ( "Icon Class from <a href='http://fontello.com/'>fonttello</a>", "pranon" )
+								"description" => __ ( "Icon Class from <a href='http://fontello.com/'>fonttello</a>", "pranon" ),
+								'dependency' => array (
+										'element' => 'contact_theme',
+										'value' => array('theme1','theme2')
+								)
+						),
+						array (
+								"type" => "textfield",
+								"class" => "h3",
+								"heading" => __ ( "Info Heading", "pranon" ),
+								"param_name" => "info_heading",
+								"description" => __ ( "If contact info has Heading", "pranon" ),
+								'dependency' => array (
+										'element' => 'contact_theme',
+										'value' => 'theme1'
+								)
+						),
+						array (
+								"type" => "textfield",
+								"class" => "h3",
+								"heading" => __ ( "Sub Info Heading", "pranon" ),
+								"param_name" => "info_sub_heading",
+								"description" => __ ( "If contact info has Heading with sub heading", "pranon" ),
+								'dependency' => array (
+										'element' => 'contact_theme',
+										'value' => 'theme1'
+								)
+						),
+						array (
+								"type" => "textfield",
+								"class" => "h3",
+								"heading" => __ ( "Contact Number", "pranon" ),
+								"param_name" => "info_phone",
+								"description" => __ ( "Your Telephone Number", "pranon" ),
+								'dependency' => array (
+										'element' => 'contact_theme',
+										'value' => 'theme1'
+								)
 						),
 						array (
 								"type" => "textfield",
 								"class" => "h3",
 								"heading" => __ ( "Contact Info", "pranon" ),
 								"param_name" => "contact_info",
-								"description" => __ ( "Contact Info, such like phone number", "pranon" )
+								"description" => __ ( "Contact Info, such like phone number", "pranon" ),
+								'dependency' => array (
+										'element' => 'contact_theme',
+										'value' => 'theme2'
+								)
 						),
 						array (
 								"type" => "textfield",
 								"class" => "a",
 								"heading" => __ ( "Contact Url", "pranon" ),
 								"param_name" => "contact_url",
-								"description" => __ ( "Contact info's URL, like website need a url. If url not needed then left it blank", "pranon" )
+								"description" => __ ( "Contact info's URL, like website need a url. If url not needed then left it blank", "pranon" ),
+								'dependency' => array (
+										'element' => 'contact_theme',
+										'value' => 'theme2'
+								)
 						)
 				)
 		) );

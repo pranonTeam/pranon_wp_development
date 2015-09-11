@@ -2,9 +2,11 @@
 defined ( 'ABSPATH' ) or die ( "No script kiddies please!" );
 
 get_header ();
-get_template_part ( 'menu-section' );?>
-<section class="headerSingle hSingleHeight overlay tCenter" style="background-image: url('<?php echo get_template_directory_uri()?>/images/teaserImages/r1.jpg');">
-	<!--Hero-->
+get_template_part ( 'menu-section' );
+
+$content_bg = esc_url (AfterSetupTheme::pranon_return_thme_option('tag-single-parallax','url') ) != null ? esc_url (AfterSetupTheme::pranon_return_thme_option('tag-single-parallax','url') ) : get_template_directory_uri().'/images/teaserImages/r1.jpg';
+?>
+<section class="headerSingle hSingleHeight overlay tCenter" style="background-image: url('<?php echo esc_url($content_bg)?>');">
 	<div class="hero">
 		<!--Title-->
 		<div class="title light ofsBottom ">

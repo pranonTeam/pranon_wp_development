@@ -9,7 +9,7 @@
 			<div class="three columns logoHolder">
 				<!--Logo-->
 				<div class="logo">
-					<a href="index.html"><img src="images/logoD.png" alt="" /></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url(AfterSetupTheme::pranon_return_thme_option('logo','url'));?>" alt="" /></a>
 				</div>
 				<!--End logo-->
 			</div>
@@ -69,6 +69,21 @@
 						}
 						
 						?> 
+				<?php if (class_exists('Woocommerce')) {
+				 global $woocommerce;
+				 // get cart quantity
+				$qty = $woocommerce->cart->get_cart_contents_count();
+
+				// get cart total
+				$total = $woocommerce->cart->get_cart_total();
+
+				// get cart url
+				$cart_url = $woocommerce->cart->get_cart_url();
+			
+			 ?>
+			
+			 <li class="cart" id="cart-icon" style="display:none;"><a href="<?php echo esc_url($cart_url)?>"><i class="icon-basket"></i><span class="count woocommerce"><?php echo esc_url($qty)?></span></a></li>
+				<?php }?>
 			</div>
 			<!--End container-->
 		</div>

@@ -1,7 +1,37 @@
 # Redux Framework Changelog
 
+## 3.5.7
+* Fixed     Customizer customizer_only and customizer section overrides. Also global customizer => false was not working.
+
+## 3.5.6.9
+* Added     Security suggestions posed in #2543 by Julio Potier from SecuPress.
+
+## 3.5.6.8
+* Fixed:    'dirlist' in filesystem proxy returning permission error on empty dirs.
+
+## 3.5.6.7
+* Added     setOption and getOption to Redux API.
+* Added     'hide_save' argument.
+
+## 3.5.6.6
+* Added:    'readonly' argument for textarea.
+
+## 3.5.6.5
+* Fixed:    #2545 - CSS validator error output misconfigured.
+* Fixed:    ACE adding escape slashes to quotes via CSS validation, causing improper error message.
+
+## 3.5.6.4
+* Added:    `ajax_save` arg for fields.  Setting to false will reload the options panel when the set option has changed.
+* Fixed:    #2532 - Spinner field arrow spacing off when dev_mode set to false due to missing `!important` CSS suffix.
+
+## 3.5.6.3
+* Added:    `autocomplete` arg to text field.  This is FALSE by default.
+
+## 3.5.6.2
+* Fixed:    Color RGBA field missing name_suffix.  Will now work in repeater extension.
+
 ## 3.5.6.1
-* Fixed:     Index error regarding icon argument.
+* Fixed:    Index error regarding icon argument.
 
 ## 3.5.6
 * Fixed     Customizer WP 4.3 final fixes.

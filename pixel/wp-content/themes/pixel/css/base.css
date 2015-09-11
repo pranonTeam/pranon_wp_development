@@ -279,7 +279,7 @@ a, .errorForm, .contactForm #submit, .tactive span, .pagination ul li span,
 	background: #ffffff;
 	border-radius: 25px;
 	padding: 8px 30px;
-	color: #2c2c2c;
+	color: #2c2c2c!important;
 	text-transform: uppercase;
 	font-size: 13px;
 	display: inline-block;
@@ -341,7 +341,7 @@ a.amore {
 	font-size: 25px;
 	left: -4px;
 	position: relative;
-	top: 17px;
+	top: -12px;
 }
 
 .hero .long  p span.last {

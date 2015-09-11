@@ -3,6 +3,10 @@ defined ( 'ABSPATH' ) or die ( "No script kiddies please!" );
 
 get_header ();
 get_template_part ( 'menu-section' );
+
+
+$content_bg = esc_url (AfterSetupTheme::pranon_return_thme_option('notfound-single-parallax','url') ) != null ? 'style="background-image: url(' . esc_url (AfterSetupTheme::pranon_return_thme_option('notfound-single-parallax','url') ) . ')"' : null;
+
 ?>
 
 <!--404 error section-->
@@ -12,7 +16,7 @@ get_template_part ( 'menu-section' );
 						<!--Error  holder-->
 						<div class="errHolder">
 							
-							<div class="errImg overlay"></div>
+							<div class="errImg overlay" <?php echo ($content_bg)?>></div>
 							
 							<div class="errIntro">
 								

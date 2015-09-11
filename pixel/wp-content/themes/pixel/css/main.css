@@ -542,8 +542,8 @@ nav.mainNav ul ul ul {
 	font-size: 21px;
 }
 
-.title.light h1 {
-	color: #ffffff;
+.title.light h1,.bgGreyDark .title.dark h1 {
+	color: #ffffff!important;
 }
 
 .title.dark h1 {
@@ -668,11 +668,11 @@ h2.expTitle {
 	color: rgba(255, 255, 255, 0.9);
 }
 
-.vc_row .changeBg:nth-child(odd) {
+.vc_row .changeBg:nth-child(odd) .exp2  {
 	background: #e59e05;
 }
 
-.vc_row .changeBg:nth-child(even) {
+.vc_row .changeBg:nth-child(even)  .exp2 {
 	background: #f9b117;
 }
 
@@ -1723,7 +1723,7 @@ a.smore {
 	margin: 0 auto;
 }
 
-.prcIco.selected i {
+.prcIco.selected i, .processHolder:hover .prcIco i {
 	background: #2c2c2c;
 	color: #f1f1f1;
 }
@@ -2018,17 +2018,17 @@ a.hmore, a.emore, a.amore {
 }
 
 .planBtn .btn {
-	color: #f1f1f1;
-	font-size: 15px;
+	color: #f1f1f1!important;
+	font-size: 15px!important;
 	text-transform: none;
-	background: #343434;
+	background: #343434!important;
 	display: inline-block;
-	padding: 8px 35px;
+	padding: 8px 35px!important;
 }
 
 .planBtn.featured .btn, .planName.featured {
-	color: #ffffff;
-	background: #eea915;
+	color: #ffffff!important;
+	background: #eea915!important;
 }
 
 /*Plans version 2*/
@@ -2403,7 +2403,7 @@ a.hmore, a.emore, a.amore {
 .prodBtn a.btn {
 	background: none;
 	border: 2px solid #f1f1f1;
-	color: #f1f1f1;
+	color: #f1f1f1!important;
 	padding: 6px 28px;
 }
 
@@ -2442,24 +2442,25 @@ a.hmore, a.emore, a.amore {
 	width: 100%;
 }
 
-.widget .prodWidget img {
-	width: 60px;
-	float: left;
-	height: auto;
-	margin: 5px 20px 5px 0;
+.widget .prodWidget img , ul.product_list_widget li a img{
+	width: 60px!important;
+	float: left!important;
+	height: auto!important;
+	margin: 5px 20px 5px 0!important;
 }
 
-.widget .prodWidget .amount {
-	font-size: 12px;
+.widget .prodWidget .amount, .widget span.amount {
+	font-size: 12px!important;
+	color: #EEA915!important;
 }
 
 .widget .cartList li {
 	overflow: hidden;
 }
 
-.widget .cartList a, .widget .featuredProd a {
-	color: #666666;
-	font-size: 14px;
+.widget .cartList a, .widget .featuredProd a, span.product-title {
+	color: #666666!important;
+	font-size: 14px!important;
 }
 
 .widget  p.total {
@@ -2472,24 +2473,28 @@ a.hmore, a.emore, a.amore {
 	color: #999999;
 }
 
-.cartBtnAction {
+.cartBtnAction , p.buttons{
 	margin-top: 8px;
 }
 
-.cartBtnAction a {
-	border: 2px solid;
-	border-radius: 25px;
-	-webkit-border-radius: 25px;
-	-moz-border-radius: 25px;
-	-ms-border-radius: 25px;
-	-o-border-radius: 25px;
-	color: #eea915;
-	float: left;
-	font-size: 13px;
-	margin: 0 6px 0 0;
-	padding: 2px 15px;
+.cartBtnAction a, p.buttons a.checkout, p.buttons a, .cartBtnAction  button.button  {
+	border: 2px solid!important;
+	border-radius: 25px!important;
+	-webkit-border-radius: 25px!important;
+	-moz-border-radius: 25px!important;
+	-ms-border-radius: 25px!important;
+	-o-border-radius: 25px!important;
+	color: #eea915!important;
+	float: left!important;
+	font-size: 13px!important;
+	margin: 0 6px 0 0!important;
+	padding: 2px 15px!important;
+	background:transparent!important;
 }
-
+p.buttons a:hover{
+background:#eea915!important;
+color:#fff!important;
+}
 .widget .featuredProd li {
 	display: block;
 	overflow: hidden;
@@ -2558,9 +2563,10 @@ a.wmore {
 /*Product details*/
 .prodSlider.sb {
 	margin-bottom: 40px;
+	clear:both;
 }
 
-.prodDetails h1 {
+.prodDetails h1, .product_title.entry-title {
 	font-size: 18px;
 	color: #2c2c2c;
 	margin-bottom: 5px;
@@ -2582,11 +2588,12 @@ a.wmore {
 }
 
 .prodPrice .priceDet del {
-	font-size: 18px;
+	font-size: 18px!important;
+	color:#999!important;
 }
 
 .prodPrice .priceDet ins {
-	font-size: 22px;
+	font-size: 22px!important;
 }
 
 .prodDescL, .prodMeta, .prodPrice, .prodQuantity {
@@ -2635,7 +2642,7 @@ a.wmore {
 	margin-top: 0;
 }
 
-.prodQuantity .cartBtnAction a {
+.prodQuantity .cartBtnAction a , p.buttons a, .cartBtnAction  button.button {
 	margin-left: 20px;
 }
 
@@ -2649,8 +2656,9 @@ a.wmore {
 }
 
 .comments.reviews .authorImg img {
-	width: 70px;
-	height: 70px;
+	width: 70px!important;
+	height: 70px!important;
+	float:left!important;
 }
 
 .comment.review {
@@ -2718,25 +2726,37 @@ form.register  input[type="email"], form.register  input[type="password"],
 	border: none;
 	overflow: hidden;
 }
-
+.woocommerce-shipping-calculator{
+margin-top:10px;
+}
+a.update{
+margin-top:6px;
+}
 form.register #submit, form.existing #submit, .woocommerce form  #submit,
-	input#place_order, input.coupon, input.checkout, input.update, button.update
+	input#place_order, input.coupon, a.checkout, input.update, button.update, a.update, input.button, a.button
 	{
-	background: #343434;
-	color: #f1f1f1;
-	cursor: pointer;
-	display: inline-block;
-	text-transform: uppercase;
-	border: none;
+	background: #343434!important;
+	color: #f1f1f1!important;
+	cursor: pointer!important;
+	display: inline-block!important;
+	text-transform: uppercase!important;
+	border: medium none!important;
+	font-family: "RobotoBoldCondensed",Arial,sans-serif!important;
+}
+.btn{
+border-radius: 25px!important;
+font-size: 13px!important;
+}
+input.coupon, input.update, button.update{
+	padding: 10px 30px!important;
+}
+a.update, a.checkout {
+padding: 8px 30px;
 }
 
-input.coupon, input.checkout, input.update, button.update {
-	padding: 10px 30px;
-}
-
-form.register #submit:hover, form.existing #submit:hover {
-	background: #eea915;
-	color: #ffffff;
+form.register #submit:hover, form.existing #submit:hover , a.update:hover{
+	background: #eea915!important;
+	color: #ffffff!important;
 }
 
 form.existing #submit {
@@ -2754,19 +2774,20 @@ form.existing a.lost_password {
 	color: #2c2c2c;
 }
 
-.alert_info {
-	background: #ededed;
+.alert_info, .woocommerce-info {
+	background: #ededed!important;
 	border-radius: 3px;
-	margin-bottom: 22px;
-	padding: 15px;
-	color: #666666;
+	border-color:transparent!important;
+	margin-bottom: 22px!important;
+	padding: 15px!important;
+	color: #666666!important;
 }
 
 .alert_info a {
 	color: #eea915;
 }
 
-.alert_info a:hover {
+.alert_info a:hover , .woocommerce-info a:hover{
 	text-decoration: underline;
 }
 
@@ -2812,20 +2833,20 @@ form.existing a.lost_password {
 
 .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea,
 	.woocommerce-page form .form-row input.input-text, .woocommerce-page form .form-row textarea,
-	.form-row-first .input-text, .form-row-last .input-text, .form-row .input-text,
+	.form-row-first .input-text, .form-row-last .input-text, .form-row .input-text,.select2-container,
 	.form-row select {
 	width: 100%;
 	background: #ededed;
-	border: 0 none;
+	border: 0 none!important;
 	color: #666666;
 	font-family: inherit;
 	font-size: 13px;
 	outline: 0 none;
-	padding: 10px;
+	padding: 10px!important;
 	resize: none;
 	width: 100%;
 	font-family: "robotolight", Arial, sans-serif;
-	border: none;
+	border: none!important;
 	overflow: hidden;
 }
 
@@ -2868,7 +2889,9 @@ form.existing a.lost_password {
 	margin-bottom: 1.618em;
 	width: 100%;
 }
-
+.showlogin, .showcoupon{
+color:#EEA915!important;
+}
 .woocommerce table.shop_attributes th, .woocommerce-page table.shop_attributes th
 	{
 	border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
@@ -2909,12 +2932,19 @@ form.existing a.lost_password {
 	text-align: center;
 	width: 100%;
 }
-
+.woocommerce table.shop_table tr{
+background-color: transparent!important;
+}
+.woocommerce table.shop_table tbody tr.cart_item  td, .woocommerce table.shop_table thead tr  th{
+text-align:center;
+}
 .woocommerce table.shop_table th, .woocommerce-page table.shop_table th
 	{
-	line-height: 18px;
-	padding: 9px 12px;
+	line-height: 18px!important;
+	padding: 9px 12px!important;
 	font-family: 'open_sansbold', Arial, sans-serif;
+	background-color:transparent!important;
+	color:#999!important;
 }
 
 .woocommerce table.shop_table td, .woocommerce-page table.shop_table td
@@ -3054,7 +3084,7 @@ form.existing a.lost_password {
 	.woocommerce-page #content table.cart a.remove, .woocommerce-page table.cart a.remove
 	{
 	border-radius: 100%;
-	color: #ffffff;
+	color: #ffffff!important;
 	display: block;
 	font-size: 1.5em;
 	height: 1em;
@@ -3259,9 +3289,9 @@ input#place_order {
 
 input#place_order:hover, form.register #submit:hover, form.existing #submit:hover,
 	.woocommerce form #submit:hover, input#place_order:hover, input.coupon:hover,
-	input.checkout:hover, input.update:hover, button.update:hover {
-	color: #ffffff;
-	background: #eea915;
+	a.checkout:hover, input.update:hover, button.update:hover {
+	color: #ffffff!important;
+	background: #eea915!important;
 }
 
 .cartTotals {
@@ -3590,12 +3620,12 @@ ul#category li a {
 }
 
 .quickBtn .btn {
-	border: 2px solid #2c2c2c;
+	border: 2px solid #2c2c2c!important;
 }
 
 .quickBtn .btn:hover {
-	background: #2c2c2c;
-	color: #f1f1f1;
+	background: #2c2c2c!important;
+	color: #f1f1f1!important;
 }
 
 /*End project single*/
@@ -3931,7 +3961,9 @@ ul#category li a {
 .postMedia.single {
 	margin-bottom: 28px !important;
 }
-
+.sixteen .postMedia.single img{
+   width:100%;
+} 
 .postLarge.quote {
 	min-height: 320px;
 }
@@ -3953,18 +3985,18 @@ ul#category li a {
 }
 
 .postLarge  a.more {
-	background: none;
-	color: #2c2c2c;
-	border: 2px solid #2c2c2c;
+	background: none!important;
+	color: #2c2c2c!important;
+	border: 2px solid #2c2c2c!important;
 	display: inline-block;
-	margin-top: 20px;
+	margin-top: 20px!important;
 	text-transform: none;
-	font-size: 14px;
+	font-size: 14px!important;
 }
 
 .postLarge  a.more:hover {
-	background: #2c2c2c;
-	color: #f1f1f1;
+	background: #2c2c2c!important;
+	color: #f1f1f1!important;
 }
 
 .postSingle p, .postSingle blockquote {
@@ -4022,8 +4054,8 @@ ul#category li a {
 	margin-left: 120px;
 }
 
-.commentContent p.expert {
-	margin-top: 10px;
+.commentContent p.expert , .commentContent div.expert{
+	margin-top: 10px!important;
 }
 
 .comments h2, .respond h2, .widget h2 {
@@ -4074,9 +4106,9 @@ ul.comments li ul.children div.comment {
 	display: inline-block;
 }
 
-.author a {
-	color: #343434;
-	font-size: 13px;
+.author a, .author strong {
+	color: #343434!important;
+	font-size: 13px!important;
 }
 
 .comments .replys, ul.comments li ul.children {
@@ -4100,7 +4132,7 @@ ul.comments li ul.children div.comment {
 	color: #eea915;
 }
 
-.commentContent .date a {
+.commentContent .date a, .commentContent .date time {
 	color: #eea915;
 	font-size: 11px;
 	display: inline-block;
@@ -4131,14 +4163,15 @@ ul.comments li ul.children div.comment {
 	padding: 12px 10px 12px 20px;
 	font-size: 13px;
 	width: 100%;
-	background: #ededed;
+	background: #ededed!important;
 	border: 0 none;
 	color: #999999;
-	font-family: "robotolight", Arial, sans-serif;
+	font-family: "robotolight", Arial, sans-serif!important;
 }
 
 .searchForm.light input[type="text"], .searchForm.light  .submitSearch {
-	background: #f8f8f8;
+	/*background: #f8f8f8;*/
+	background: #ededed!important;
 }
 
 .searchForm  .submitSearch {
@@ -4153,6 +4186,7 @@ ul.comments li ul.children div.comment {
 
 .catList li, .catRecents li, .meta li, .widget ul li {
 	line-height: 30px;
+	clear:both;
 }
 
 .catList ul, .widget ul li ul {
@@ -4417,6 +4451,7 @@ span.arrow i {
 	left: 50%;
 	margin-left: -50px;
 	top: -85px;
+	z-index: 10;
 }
 
 .lifeInner span i {
@@ -4570,7 +4605,7 @@ span.arrow i {
 
 .contactForm #submit, .replyForm #submit, .reviewForm #submit {
 	background: #343434;
-	color: #f1f1f1;
+	color: #f1f1f1!important;
 	display: inline-block;
 	cursor: pointer;
 	text-transform: uppercase;
@@ -4821,7 +4856,7 @@ span.arrow i {
 	color: rgba(255, 255, 255, .3);
 }
 
-.fbInner p span.brand {
+.fbInner p span.brand ,.fbInner p a{
 	font-size: 12px;
 	color: #eea915;
 }
@@ -5696,6 +5731,9 @@ span.arrow i {
 
 /* Mobile Portrait Size -> Mobile Landscape Size */
 @media only screen and (max-width:479px) {
+	.hero.wide{
+	top:0px;
+	}
 	input, textarea {
 		-webkit-appearance: none;
 		-webkit-border-radius: 0;
@@ -6145,17 +6183,17 @@ table {
 	border-collapse: collapse;
 }
 /* Zebra striping */
-tr:nth-of-type(odd) {
+.footerWidget  tr:nth-of-type(odd), .widget  tr:nth-of-type(odd) {
 	background: #eee;
 }
 
-th {
+.footerWidget  th, .widget  th {
 	background: #333;
 	color: white;
 	font-weight: bold;
 }
 
-td, th {
+.footerWidget  td,.footerWidget th,.widget  td,.widget th {
 	padding: 6px;
 	border: 1px solid #ccc;
 	text-align: left;
@@ -6165,7 +6203,7 @@ td#today {
 	color: #EEA915;
 }
 
-td>a {
+.footerWidget td>a, .widget td>a{
 	color: black;
 }
 
@@ -6313,3 +6351,167 @@ ul.socialsHolder li {
 	overflow: scroll;
 } */
 
+article .wp-caption{
+max-width:100%;
+}
+.vc_parallax .smallIntro strong{
+	color: #fff!important;
+}
+.clients .smallIntro strong{
+	color: #2C2C2C!important;
+}
+
+
+/***************** =============== CSS WOOCOMMERCE +============ *****/
+.woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count{
+margin:0px!important;
+}
+.woocommerce-result-count{
+margin-top:8px!important;}
+.woocommerce a{
+color:#fff;
+}
+p.buttons{
+padding-bottom:40px;
+}
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    font-size: inherit;
+    margin: 0px;
+    line-height: inherit;
+    cursor: pointer;
+    position: relative;
+    font-family: inherit;
+    text-decoration: none;
+    overflow: visible;
+    padding: inherit;
+    font-weight: inherit;
+    border-radius: inherit;
+    left: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: inherit;
+    white-space: nowrap;
+    display: inline-block;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+.woocommerce-error{
+clear:both;
+border: 2px solid #B81C23!important;
+}
+.woocommerce a{
+color: #999;
+}
+.added_to_cart.wc-forward{
+clear:both;
+display:block!important;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+padding:0px!important;
+margin:0px!important;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li{
+    border: 0px solid #F8F8F8!important;
+    background-color: #F8F8F8!important;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    border-radius: 0px!important;
+    margin: 0px -5px;
+    padding: 0px 1em;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active{
+background: #FFF none repeat scroll 0% 0%!important;
+z-index: 2;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+
+    left: -6px;
+    border-bottom-right-radius: 0px!important;
+    border-width: 0px!important;
+    box-shadow: transparent!important;
+
+}
+.woocommerce div.product .woocommerce-tabs .panel{
+display: block;
+border-width: 0px;
+padding: 1.78em 1.4em!important;
+font-size: 14px;
+line-height: 22px;
+background: #FFF none repeat scroll 0% 0%!important;
+border-radius: 0px 0px 3px 3px!important;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{
+color: #666!important;
+text-transform: uppercase;
+font-size: 13px!important;
+display: block;
+text-decoration: none;
+font-family: "robotobold",Arial,sans-serif!important;
+top: 2px!important;
+background: #FFF none repeat scroll 0% 0%!important;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a{
+color: #2C2C2C!important;
+text-transform: uppercase!important;
+text-decoration: none;
+font-size: 13px!important;
+display: block;
+font-family: "robotobold",Arial,sans-serif!important;
+padding: 10px 25px !important;
+}
+.noGap.columns{
+margin-left:0px!important;
+margin-right:0px!important;
+}
+
+/***************** NINJA FORM ***************/
+.ninja-forms-all-fields-wrap{
+margin-top: 40px !important;
+}
+.profile_pass-wrap input, .text-wrap.label-above input, .text-wrap.label-below input, .text-wrap.label-inside input, .textarea-wrap.label-above textarea, .textarea-wrap.label-below textarea, .textarea-wrap.label-inside textarea, .list-dropdown-wrap.label-above select, .list-dropdown-wrap.label-below select{
+background: #F8F8F8 none repeat scroll 0% 0%;
+color: #666;
+font-size: 13px;
+margin: 0px 0px 14px;
+outline: 0px none;
+padding: 10px;
+resize: none;
+width: 100%;
+font-family: "robotolight",Arial,sans-serif;
+border: 3px solid #F8F8F8;
+overflow: hidden;
+}
+.field-wrap, #ninja_forms_required_items {
+    margin-bottom: 0px!important;
+}
+.submit-wrap input[type="submit"]{
+background: #343434 none repeat scroll 0% 0%;
+color: #F1F1F1;
+display: inline-block;
+cursor: pointer;
+text-transform: uppercase;
+padding: 8px 30px;
+border-radius: 25px;
+font-size: 13px;
+float:left;
+}
+.submit-wrap input[type="submit"]:hover{
+    background: #EEA915 none repeat scroll 0% 0%;
+    color: #FFF;
+}
+.column1-wrap, .column2-wrap{
+float:left!important;
+width:50%!important;
+}
+.column2-wrap{
+padding: 0px 0px 0px 10px;
+}
+.column1-wrap{
+padding: 0px 3px 0px 0px;
+}
+.ninja-forms-required-items{
+margin-bottom:10px;
+}

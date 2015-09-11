@@ -751,9 +751,25 @@
 	jQuery('.what_we_do_column_2').parent().parent().css({'padding':'0px'}).addClass('changeBg');
 	
 	jQuery(".vc_parallax").each(function(){
+		var sHeight = jQuery('.hSingleHeight').height();
+		if(jQuery('.vc_parallax .hSingleHeight').length>0){
+			var sHeight = jQuery('.vc_parallax .hSingleHeight').height();
+			var $height = jQuery(this).height()+sHeight;
+		}else{
 			var $height = jQuery(this).height();
+		}
+			
 			jQuery(this).css({'height':$height});
 	    });
 	jQuery('div.tagsSingle ul').addClass('tagsListSingle');
 	jQuery('.infoHolder').parents('div.vc_row').addClass('ofsInTop ofsInBottom bgYellow');
+	jQuery('.additional_services').find('ul li').prepend('<i class="icon-right-open-mini "></i>');
+	jQuery('.additional_services_theme3').parent().parent().wrapAll('<div class="container clearfix"> </div>');
+	var $amount = jQuery('div.shipping-pixel span.amount').text();
+	if($amount!='' || $amount!='undefined'){
+		jQuery('#forShippingInstanceAmount').text($amount);
+	}else{
+		jQuery('#forShippingInstanceAmount').text('Free Shipping');
+	}
+
 })(jQuery);

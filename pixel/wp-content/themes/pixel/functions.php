@@ -10,6 +10,9 @@ include_once 'includes/CreateSidebar.php';
 include_once 'includes/OverrideWidgets.php';
 include_once 'includes/comments.php';
 include_once 'includes/Visual_Composer.php';
+include_once 'includes/sample-config.php';
+include_once 'includes/class-tgm-plugin-activation.php';
+include_once 'includes/PranonRequiredPlugins.php';
 
 /*********** ============ ShortCode ============== ************/
 include_once 'includes/shortcodes/main_slide.php';
@@ -34,8 +37,15 @@ include_once 'includes/shortcodes/additional_services.php';
 include_once 'includes/shortcodes/custom_page_header.php';
 include_once 'includes/shortcodes/contact.php';
 include_once 'includes/shortcodes/contact_info.php';
+include_once 'includes/shortcodes/services.php';
 
 /*********** ============ END ShortCode ============== ************/
+
+/***************** WOOCOMMERCE *****************/
+if ( class_exists( 'woocommerce' ) ) {
+include_once 'includes/pranonWooCommerce.php';
+}
+
 include_once 'includes/widgets/tweeter_widget.php';
 //include_once 'twitter/index.php';
 /*

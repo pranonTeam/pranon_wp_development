@@ -66,15 +66,15 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 				
 				if (comments_open ( $single_post->ID )) {
 					if ($num_comments == 0) {
-						$comments = __ ( 'No Comments' );
+						$comments = __ ( 'No Comments','pranon' );
 					} elseif ($num_comments > 1) {
-						$comments = $num_comments . __ ( ' Comments' );
+						$comments = $num_comments.' '. __ ('Comments','pranon' );
 					} else {
-						$comments = __ ( '1 Comment' );
+						$comments = __ ( '1 Comment','pranon' );
 					}
 					$write_comments = '<span class="metaComments"><a href="' . get_comments_link ($single_post->ID) . '">' . $comments . '</a></span>';
 				} else {
-					$write_comments = __ ( 'Comments are off for this post.' );
+					$write_comments = __ ( 'Comments are off for this post.','pranon' );
 				}
 				
 				if ($single_post->post_excerpt != null) {

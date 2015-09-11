@@ -1,0 +1,1001 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pixel\n"
+"POT-Creation-Date: 2015-08-31 15:27+0600\n"
+"PO-Revision-Date: 2015-08-31 15:44+0600\n"
+"Last-Translator: Pranon <pranon@pranon.com>\n"
+"Language-Team: \n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_html_e;esc_html__;esc_arrt__;"
+"_n\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: css\n"
+"X-Poedit-SearchPathExcluded-1: font\n"
+"X-Poedit-SearchPathExcluded-2: images\n"
+"X-Poedit-SearchPathExcluded-3: js\n"
+
+#: 404.php:19
+msgid "404 : Ooops"
+msgstr "404 : Ooops"
+
+#: 404.php:20
+msgid ""
+"we can not find what you are looking for. Please check the URL to ensure "
+"that the path is correct or search again."
+msgstr ""
+"Vi kan ikke finde det, du leder efter. Kontroller webadressen for at "
+"sikre , at stien er korrekt eller søge igen."
+
+#: archive.php:15
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Daglig Arkiver : %s"
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Monthly Arkiver : %s"
+
+#: archive.php:21
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Yearly Arkiver : %s"
+
+#: archive.php:24
+msgid "Archives"
+msgstr "arkiver"
+
+#: author.php:34
+msgid "About the Author"
+msgstr "Om forfatteren"
+
+#: category.php:12
+#, php-format
+msgid "Category Archives: %s"
+msgstr "kategori Arkiver : %s"
+
+#: comments.php:57
+msgid "Comments are closed."
+msgstr "Kommentarer er lukket."
+
+#: comments.php:71
+msgid "You must be"
+msgstr "Du skal være"
+
+#: comments.php:74
+msgid "logged in"
+msgstr "logget ind"
+
+#: comments.php:74
+msgid "to post a comment"
+msgstr "at skrive en kommentar"
+
+#: comments.php:86 comments.php:89
+msgid "Logged in as"
+msgstr "Logget ind som"
+
+#: comments.php:89
+msgid "Log out from this account"
+msgstr "Log ud fra denne konto"
+
+#: comments.php:95
+msgid "Your email address will not be published. Required fields are marked"
+msgstr ""
+"Din e-mail adresse vil ikke blive offentliggjort. Krævede felter er markeret"
+
+#: comments.php:122
+msgid "TYPE YOUR MESSAGE HERE*"
+msgstr "Skriv din besked HER *"
+
+#: comments.php:126
+msgid "Post Comment"
+msgstr "post kommentar"
+
+#: content-audio.php:60 content-gallery.php:86 content-image.php:55
+#: content-page.php:29 content-video.php:60 content.php:55 index.php:68
+#: single-portfolio.php:116 single.php:182
+msgid "Pages:"
+msgstr "Sider:"
+
+#: content-audio.php:64 content-gallery.php:90 content-image.php:59
+#: content-page.php:33 content-video.php:64 content.php:59
+#: includes/AfterSetupTheme.php:422 single-portfolio.php:120 single.php:186
+msgid "Page"
+msgstr "side"
+
+#: content-audio.php:70 content-gallery.php:96 content-image.php:65
+#: content-video.php:70 content.php:65
+msgid "Read more ... "
+msgstr "Læs mere ..."
+
+#: content-audio.php:71 content-gallery.php:97 content-image.php:66
+#: content-page.php:39 content-video.php:71 content.php:66
+msgid "Edit"
+msgstr "Edit"
+
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "Intet fundet"
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Klar til at udgive dit første indlæg ? <a href=\"%1$s\"> Kom i gang her </"
+"a>."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Beklager, men intet matchede dine søgeord. Prøv venligst igen med nogle "
+"forskellige søgeord."
+
+#: content-none.php:26
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Det synes vi kan & rsquo ; t finde det, du &rsquo ; re leder efter. Måske "
+"søger kan hjælpe."
+
+#: includes/AfterSetupTheme.php:100
+msgid "Theme Multi Page"
+msgstr "Tema Multi Side"
+
+#: includes/AfterSetupTheme.php:101
+msgid "Theme Single Page"
+msgstr "Tema Enkelt side"
+
+#: includes/AfterSetupTheme.php:149
+msgid "Google Profile URL"
+msgstr "Google-profil URL"
+
+#: includes/AfterSetupTheme.php:150
+msgid "Twitter Profile URL"
+msgstr "Twitter Profile URL"
+
+#: includes/AfterSetupTheme.php:151
+msgid "Facebook Profile URL"
+msgstr "Facebook profil URL"
+
+#: includes/AfterSetupTheme.php:152
+msgid "Linkedin Profile URL"
+msgstr "Linkedin profil URL"
+
+#: includes/AfterSetupTheme.php:184 includes/AfterSetupTheme.php:187
+#, php-format
+msgid "Page %s"
+msgstr "side %s"
+
+#: includes/AfterSetupTheme.php:278
+msgid "Views"
+msgstr "visninger"
+
+#: includes/AfterSetupTheme.php:318
+msgid "Home"
+msgstr "hjem"
+
+#: includes/AfterSetupTheme.php:430
+msgid "Error 404"
+msgstr "fejl 404"
+
+#: includes/CreateSidebar.php:5
+msgid "Pranon Sidebar"
+msgstr "Pranon Sidebar"
+
+#: includes/CreateSidebar.php:20
+msgid "Pranon Footer Sidebar"
+msgstr "Pranon Footer Sidebar"
+
+#: includes/CustomMetaBox.php:10
+msgid "Put Video Embeded url"
+msgstr "Put Video Embeded url"
+
+#: includes/CustomMetaBox.php:25
+msgid "Put You video SRC String"
+msgstr "Put du video SRC String"
+
+#: includes/CustomMetaBox.php:86
+msgid "Portfolio Sidbar Info"
+msgstr "Portefølje Sidbar Info"
+
+#: includes/CustomMetaBox.php:106
+msgid "Inoformation Heading (Should Not be Null)"
+msgstr "Inoformation Overskrift ( Bør ikke være Null )"
+
+#: includes/CustomMetaBox.php:113
+msgid "Inoformation Attributes Headings Multiple seperated with \" ,\""
+msgstr "Inoformation attributter Overskrifter Multiple adskilt med \",\""
+
+#: includes/CustomMetaBox.php:121
+msgid "Attributes Inoformation Multiple seperated with \" //\""
+msgstr "Attributter Inoformation Multiple adskilt med \"// \""
+
+#: includes/CustomMetaBox.php:129
+msgid "Button Text, Null Not show\",\""
+msgstr "Knap Tekst, Null Ikke vise \" , \""
+
+#: includes/CustomMetaBox.php:136
+msgid "Button Url\",\""
+msgstr "Knap Url \",\""
+
+#: includes/Visual_Composer.php:35
+msgid "Pixel Slide"
+msgstr "pixel Slide"
+
+#: includes/Visual_Composer.php:38 includes/Visual_Composer.php:107
+#: includes/Visual_Composer.php:139 includes/Visual_Composer.php:171
+#: includes/Visual_Composer.php:240 includes/Visual_Composer.php:300
+#: includes/Visual_Composer.php:372 includes/Visual_Composer.php:443
+#: includes/Visual_Composer.php:520 includes/Visual_Composer.php:587
+#: includes/Visual_Composer.php:683 includes/Visual_Composer.php:736
+#: includes/Visual_Composer.php:775 includes/Visual_Composer.php:834
+#: includes/Visual_Composer.php:876 includes/Visual_Composer.php:916
+#: includes/Visual_Composer.php:1009 includes/Visual_Composer.php:1050
+#: includes/Visual_Composer.php:1130 includes/Visual_Composer.php:1185
+#: includes/Visual_Composer.php:1238 includes/Visual_Composer.php:1283
+msgid "Pixel"
+msgstr "Pixel"
+
+#: includes/Visual_Composer.php:50
+msgid "Text"
+msgstr "tekst"
+
+#: includes/Visual_Composer.php:52
+msgid "Text shows above slider"
+msgstr "Tekst viser over skyderen"
+
+#: includes/Visual_Composer.php:57 includes/Visual_Composer.php:861
+msgid "Images"
+msgstr "Billeder"
+
+#: includes/Visual_Composer.php:59 includes/Visual_Composer.php:864
+msgid "Images for slide"
+msgstr "Billeder til dias"
+
+#: includes/Visual_Composer.php:64 includes/Visual_Composer.php:641
+msgid "Social Link"
+msgstr "Social Link"
+
+#: includes/Visual_Composer.php:71 includes/Visual_Composer.php:648
+msgid "Social Link shows or not"
+msgstr "Social Link viser eller ej"
+
+#: includes/Visual_Composer.php:77 includes/Visual_Composer.php:654
+#: includes/Visual_Composer.php:1029
+msgid "Social Icon Classes"
+msgstr "Social Ikon Klasser"
+
+#: includes/Visual_Composer.php:79
+msgid "icon-facebook, icon-linkedin, icon-twitter, icon-instagram"
+msgstr ""
+
+#: includes/Visual_Composer.php:80 includes/Visual_Composer.php:656
+msgid "Social Icon Classes multiple seperated by 'new line'."
+msgstr "Social Ikon Klasser flere adskilt af \" ny linje \"."
+
+#: includes/Visual_Composer.php:90 includes/Visual_Composer.php:666
+#: includes/Visual_Composer.php:1037
+msgid "Social Links"
+msgstr "Social Links"
+
+#: includes/Visual_Composer.php:92
+msgid "#facebook, #linkedin, #twitter, #instagram"
+msgstr ""
+
+#: includes/Visual_Composer.php:93 includes/Visual_Composer.php:668
+msgid "Social links multiple seperated by 'new line'."
+msgstr "Sociale links multipel adskilt af \" ny linje \"."
+
+#: includes/Visual_Composer.php:104
+msgid "Pixel Welcome Note"
+msgstr "Pixel Velkommen Bemærk"
+
+#: includes/Visual_Composer.php:119 includes/Visual_Composer.php:390
+#: includes/Visual_Composer.php:532 includes/Visual_Composer.php:695
+#: includes/Visual_Composer.php:846 includes/Visual_Composer.php:1021
+#: includes/Visual_Composer.php:1062 includes/Visual_Composer.php:1142
+#: includes/Visual_Composer.php:1197
+msgid "Heading"
+msgstr "overskrift"
+
+#: includes/Visual_Composer.php:121
+msgid "Enter Heading Text"
+msgstr "Indtast Overskrift Tekst"
+
+#: includes/Visual_Composer.php:127
+msgid "Welcome Content"
+msgstr "velkommen indhold"
+
+#: includes/Visual_Composer.php:129
+msgid "Content shows as welcome note, follow documentation"
+msgstr "Indholdet viser så velkommen note, skal du følge dokumentation"
+
+#: includes/Visual_Composer.php:136
+msgid "Pixel Section heading"
+msgstr "Pixel Sektion overskrift"
+
+#: includes/Visual_Composer.php:151
+msgid "Section Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:153
+msgid "Enter Section Heading Text"
+msgstr ""
+
+#: includes/Visual_Composer.php:159
+msgid "Section Short Description"
+msgstr ""
+
+#: includes/Visual_Composer.php:161
+msgid "Section heading has Short Description, follow documentation"
+msgstr ""
+
+#: includes/Visual_Composer.php:168
+msgid "Pixel What we do column"
+msgstr ""
+
+#: includes/Visual_Composer.php:183 includes/Visual_Composer.php:252
+msgid "Column Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:185 includes/Visual_Composer.php:254
+msgid "Enter Heading Text for column"
+msgstr ""
+
+#: includes/Visual_Composer.php:191
+msgid "Column Icon Class"
+msgstr ""
+
+#: includes/Visual_Composer.php:193
+msgid "Icon Class e.g 'icon-feather'"
+msgstr ""
+
+#: includes/Visual_Composer.php:199 includes/Visual_Composer.php:260
+msgid "Url"
+msgstr ""
+
+#: includes/Visual_Composer.php:201
+msgid "Read More Button Url"
+msgstr ""
+
+#: includes/Visual_Composer.php:207
+msgid "Read More Text"
+msgstr ""
+
+#: includes/Visual_Composer.php:209
+msgid "Read More Button Text"
+msgstr ""
+
+#: includes/Visual_Composer.php:215
+msgid "Column Content"
+msgstr ""
+
+#: includes/Visual_Composer.php:217
+msgid "Content shows as column excerpt, follow documentation"
+msgstr ""
+
+#: includes/Visual_Composer.php:222 includes/Visual_Composer.php:283
+#: includes/Visual_Composer.php:1085 includes/Visual_Composer.php:1165
+msgid "Choose Theme"
+msgstr ""
+
+#: includes/Visual_Composer.php:230 includes/Visual_Composer.php:290
+msgid "Choose theme to change look in frontend"
+msgstr ""
+
+#: includes/Visual_Composer.php:237
+msgid "Pixel Credentials"
+msgstr ""
+
+#: includes/Visual_Composer.php:262
+msgid "Link Url"
+msgstr ""
+
+#: includes/Visual_Composer.php:268
+msgid "Credentials Button Text"
+msgstr ""
+
+#: includes/Visual_Composer.php:270 includes/Visual_Composer.php:540
+#: includes/Visual_Composer.php:1112
+msgid "Button Text"
+msgstr ""
+
+#: includes/Visual_Composer.php:276 includes/Visual_Composer.php:278
+msgid "Credentials Background Image"
+msgstr ""
+
+#: includes/Visual_Composer.php:297
+msgid "Pixel Recent Blog Post"
+msgstr ""
+
+#: includes/Visual_Composer.php:312 includes/Visual_Composer.php:787
+msgid "Select Post Type"
+msgstr ""
+
+#: includes/Visual_Composer.php:314 includes/Visual_Composer.php:789
+msgid "Select a Post Type"
+msgstr ""
+
+#: includes/Visual_Composer.php:319 includes/Visual_Composer.php:461
+#: includes/Visual_Composer.php:794
+msgid "Orderby"
+msgstr ""
+
+#: includes/Visual_Composer.php:330 includes/Visual_Composer.php:472
+#: includes/Visual_Composer.php:805
+msgid ""
+"Oderby arragement see <a href='https://codex.wordpress.org/Template_Tags/"
+"get_posts'>codex</a> for details"
+msgstr ""
+
+#: includes/Visual_Composer.php:335 includes/Visual_Composer.php:477
+#: includes/Visual_Composer.php:810
+msgid "Select Order"
+msgstr ""
+
+#: includes/Visual_Composer.php:342 includes/Visual_Composer.php:484
+#: includes/Visual_Composer.php:817
+msgid "Ascending or decending Order "
+msgstr ""
+
+#: includes/Visual_Composer.php:347
+msgid "Select Column"
+msgstr ""
+
+#: includes/Visual_Composer.php:354
+msgid "Select Column Number to Show Blog Posts"
+msgstr ""
+
+#: includes/Visual_Composer.php:359 includes/Visual_Composer.php:496
+#: includes/Visual_Composer.php:822
+msgid "Number Of posts"
+msgstr ""
+
+#: includes/Visual_Composer.php:361 includes/Visual_Composer.php:498
+#: includes/Visual_Composer.php:824
+msgid "Number of posts should be shown in this section, numeric value"
+msgstr ""
+
+#: includes/Visual_Composer.php:369
+msgid "Pixel Tweet Feed"
+msgstr ""
+
+#: includes/Visual_Composer.php:383
+msgid "User Name"
+msgstr ""
+
+#: includes/Visual_Composer.php:385
+msgid "User name of Tweeter account"
+msgstr ""
+
+#: includes/Visual_Composer.php:392
+msgid "Heading Of This Section. Wrape it into 'h3' tag"
+msgstr ""
+
+#: includes/Visual_Composer.php:440
+msgid "Pixel Portfolio Filter"
+msgstr ""
+
+#: includes/Visual_Composer.php:454 includes/Visual_Composer.php:456
+msgid "Select Post Type of Portfolio"
+msgstr ""
+
+#: includes/Visual_Composer.php:489 includes/Visual_Composer.php:491
+msgid "Select Custom Taxonomy"
+msgstr ""
+
+#: includes/Visual_Composer.php:503
+msgid "Select Image Size"
+msgstr ""
+
+#: includes/Visual_Composer.php:510
+msgid "Select Portfolio Feature's Image Size "
+msgstr ""
+
+#: includes/Visual_Composer.php:517
+msgid "Pixel get in touch section"
+msgstr ""
+
+#: includes/Visual_Composer.php:534
+msgid "Enter Suitable Heading Text"
+msgstr ""
+
+#: includes/Visual_Composer.php:542
+msgid "Enter Suitable Button Text"
+msgstr ""
+
+#: includes/Visual_Composer.php:548 includes/Visual_Composer.php:1100
+msgid "Button Url"
+msgstr ""
+
+#: includes/Visual_Composer.php:550
+msgid "Enter Suitable URl for button click destination"
+msgstr ""
+
+#: includes/Visual_Composer.php:555
+msgid "Select Theme"
+msgstr ""
+
+#: includes/Visual_Composer.php:564
+msgid "Select Theme for this section "
+msgstr ""
+
+#: includes/Visual_Composer.php:570 includes/Visual_Composer.php:572
+msgid "Section Background Image"
+msgstr ""
+
+#: includes/Visual_Composer.php:584
+msgid "Pixel Team"
+msgstr ""
+
+#: includes/Visual_Composer.php:599
+msgid "Team Member Name"
+msgstr ""
+
+#: includes/Visual_Composer.php:601
+msgid "Name of Team Member"
+msgstr ""
+
+#: includes/Visual_Composer.php:607
+msgid "Designation of Team Member"
+msgstr ""
+
+#: includes/Visual_Composer.php:609
+msgid "Designation of Team Member,"
+msgstr ""
+
+#: includes/Visual_Composer.php:615
+msgid "About Team Member"
+msgstr ""
+
+#: includes/Visual_Composer.php:617 includes/Visual_Composer.php:697
+msgid "About Team Member, a short description"
+msgstr ""
+
+#: includes/Visual_Composer.php:622
+msgid "Team Image"
+msgstr ""
+
+#: includes/Visual_Composer.php:624
+msgid "Images for Team Member"
+msgstr ""
+
+#: includes/Visual_Composer.php:629
+msgid "Team Theme"
+msgstr ""
+
+#: includes/Visual_Composer.php:636
+msgid "Team Theme Choose"
+msgstr ""
+
+#: includes/Visual_Composer.php:680
+msgid "Pixel Clients"
+msgstr ""
+
+#: includes/Visual_Composer.php:703
+msgid "Client Images"
+msgstr ""
+
+#: includes/Visual_Composer.php:705
+msgid "Images for Clients, set client link in 'CAPTION'"
+msgstr ""
+
+#: includes/Visual_Composer.php:711
+msgid "Clients Links"
+msgstr ""
+
+#: includes/Visual_Composer.php:713
+msgid ""
+"Client links for multiple clients and seperated by 'new line'. Links should "
+"be sequential as client images"
+msgstr ""
+
+#: includes/Visual_Composer.php:718 includes/Visual_Composer.php:725
+msgid "Client Theme"
+msgstr ""
+
+#: includes/Visual_Composer.php:733
+msgid "Pixel Experties"
+msgstr ""
+
+#: includes/Visual_Composer.php:748
+msgid "About Experties"
+msgstr ""
+
+#: includes/Visual_Composer.php:750
+msgid "About Expert, a short description"
+msgstr ""
+
+#: includes/Visual_Composer.php:756 includes/Visual_Composer.php:896
+#: includes/Visual_Composer.php:1249 includes/Visual_Composer.php:1306
+msgid "Icon Class"
+msgstr ""
+
+#: includes/Visual_Composer.php:758
+msgid ""
+"Experties's Icon Class from <a href='http://fontello.com/'>fonttello</a>"
+msgstr ""
+
+#: includes/Visual_Composer.php:763
+msgid "Expert Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:765
+msgid "Experties's Name or Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:772
+msgid "Pixel Testimonials"
+msgstr ""
+
+#: includes/Visual_Composer.php:831
+msgid "Pixel About Us Intro"
+msgstr ""
+
+#: includes/Visual_Composer.php:848
+msgid "Heading of introduction"
+msgstr ""
+
+#: includes/Visual_Composer.php:854
+msgid "Introduction"
+msgstr ""
+
+#: includes/Visual_Composer.php:856
+msgid "Introduction About Us"
+msgstr ""
+
+#: includes/Visual_Composer.php:873
+msgid "Pixel Fun Facts"
+msgstr ""
+
+#: includes/Visual_Composer.php:888
+msgid "Fact Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:890
+msgid "Heading About fact or fun"
+msgstr ""
+
+#: includes/Visual_Composer.php:898
+msgid ""
+"Fun or fact's Icon Class from <a href='http://fontello.com/'>fonttello</a>"
+msgstr ""
+
+#: includes/Visual_Composer.php:903
+msgid "Number"
+msgstr ""
+
+#: includes/Visual_Composer.php:905
+msgid "Number of fun or fact happened, number should be NUMERIC"
+msgstr ""
+
+#: includes/Visual_Composer.php:913
+msgid "Pixel Price Table"
+msgstr ""
+
+#: includes/Visual_Composer.php:928
+msgid "Validity"
+msgstr ""
+
+#: includes/Visual_Composer.php:930
+msgid "Validity e.g per month, year, day etc."
+msgstr ""
+
+#: includes/Visual_Composer.php:936
+msgid "Amount"
+msgstr ""
+
+#: includes/Visual_Composer.php:938
+msgid "Amount, should be numeric"
+msgstr ""
+
+#: includes/Visual_Composer.php:943
+msgid "Currency"
+msgstr ""
+
+#: includes/Visual_Composer.php:945
+msgid "Currency Symbol e.g $."
+msgstr ""
+
+#: includes/Visual_Composer.php:950
+msgid "Sign Up Url"
+msgstr ""
+
+#: includes/Visual_Composer.php:952
+msgid "Give the sign up url to get access"
+msgstr ""
+
+#: includes/Visual_Composer.php:957
+msgid "Sign Up Text"
+msgstr ""
+
+#: includes/Visual_Composer.php:959
+msgid "Give the sign up text"
+msgstr ""
+
+#: includes/Visual_Composer.php:964
+msgid "Plan Name"
+msgstr ""
+
+#: includes/Visual_Composer.php:966
+msgid "Name of the plan e.g. Premium, Standard, Basic etc."
+msgstr ""
+
+#: includes/Visual_Composer.php:972
+msgid "Offered Options"
+msgstr ""
+
+#: includes/Visual_Composer.php:974
+msgid "Offered Options, Multiple options seperated by new line"
+msgstr ""
+
+#: includes/Visual_Composer.php:979
+msgid "This plan highilited?"
+msgstr ""
+
+#: includes/Visual_Composer.php:986
+msgid "This plan highilited or not"
+msgstr ""
+
+#: includes/Visual_Composer.php:991
+msgid "Price Table Theme"
+msgstr ""
+
+#: includes/Visual_Composer.php:998
+msgid "Choose Price Table Theme"
+msgstr ""
+
+#: includes/Visual_Composer.php:1006
+msgid "Pixel Social Link Section"
+msgstr ""
+
+#: includes/Visual_Composer.php:1023
+msgid "Heading of this section"
+msgstr ""
+
+#: includes/Visual_Composer.php:1031
+msgid ""
+"Icon Class from <a href='http://fontello.com/'>fonttello</a>, Multiple "
+"options seperated by new line"
+msgstr ""
+
+#: includes/Visual_Composer.php:1039
+msgid ""
+"Social Links, should be same number as icon classes, Multiple options "
+"seperated by new line"
+msgstr ""
+
+#: includes/Visual_Composer.php:1047
+msgid "Pixel Additional Services"
+msgstr ""
+
+#: includes/Visual_Composer.php:1064
+msgid "Heading of particular service"
+msgstr ""
+
+#: includes/Visual_Composer.php:1070 includes/Visual_Composer.php:1150
+#: includes/Visual_Composer.php:1205
+msgid "Content"
+msgstr ""
+
+#: includes/Visual_Composer.php:1072
+msgid "Content bellow the heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1078
+msgid "Icon Classe"
+msgstr ""
+
+#: includes/Visual_Composer.php:1080 includes/Visual_Composer.php:1251
+#: includes/Visual_Composer.php:1308
+msgid "Icon Class from <a href='http://fontello.com/'>fonttello</a>"
+msgstr ""
+
+#: includes/Visual_Composer.php:1094 includes/Visual_Composer.php:1172
+msgid "Choose a theme"
+msgstr ""
+
+#: includes/Visual_Composer.php:1102
+msgid "Browse button url."
+msgstr ""
+
+#: includes/Visual_Composer.php:1114
+msgid "Browse button text."
+msgstr ""
+
+#: includes/Visual_Composer.php:1127
+msgid "Pixel Custom Page Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1144
+msgid "Heading of particular Page"
+msgstr ""
+
+#: includes/Visual_Composer.php:1152 includes/Visual_Composer.php:1207
+msgid "Content shows bellow the heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1157 includes/Visual_Composer.php:1212
+msgid "Image"
+msgstr ""
+
+#: includes/Visual_Composer.php:1160
+msgid "Images Like Logo, should not large"
+msgstr ""
+
+#: includes/Visual_Composer.php:1182
+msgid "Pixel Services"
+msgstr ""
+
+#: includes/Visual_Composer.php:1199
+msgid "Heading of particular Service"
+msgstr ""
+
+#: includes/Visual_Composer.php:1215
+msgid "Image for specific service"
+msgstr ""
+
+#: includes/Visual_Composer.php:1220
+msgid "Choose Image Position"
+msgstr ""
+
+#: includes/Visual_Composer.php:1227 includes/Visual_Composer.php:1301
+msgid "Choose image position"
+msgstr ""
+
+#: includes/Visual_Composer.php:1235
+msgid "Pixel Contact Section"
+msgstr ""
+
+#: includes/Visual_Composer.php:1256
+msgid "Form Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1258
+msgid "At top of the form, Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1263 includes/Visual_Composer.php:1265
+msgid "Form Short Description"
+msgstr ""
+
+#: includes/Visual_Composer.php:1270 includes/Visual_Composer.php:1272
+msgid "Contact form 7 Shortcode"
+msgstr ""
+
+#: includes/Visual_Composer.php:1280
+msgid "Pixel Contact Info Section"
+msgstr ""
+
+#: includes/Visual_Composer.php:1294
+msgid "Choose Info Theme"
+msgstr ""
+
+#: includes/Visual_Composer.php:1317
+msgid "Info Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1319
+msgid "If contact info has Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1328
+msgid "Sub Info Heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1330
+msgid "If contact info has Heading with sub heading"
+msgstr ""
+
+#: includes/Visual_Composer.php:1339
+msgid "Contact Number"
+msgstr ""
+
+#: includes/Visual_Composer.php:1341
+msgid "Your Telephone Number"
+msgstr ""
+
+#: includes/Visual_Composer.php:1350
+msgid "Contact Info"
+msgstr ""
+
+#: includes/Visual_Composer.php:1352
+msgid "Contact Info, such like phone number"
+msgstr ""
+
+#: includes/Visual_Composer.php:1361
+msgid "Contact Url"
+msgstr ""
+
+#: includes/Visual_Composer.php:1363
+msgid ""
+"Contact info's URL, like website need a url. If url not needed then left it "
+"blank"
+msgstr ""
+
+#: includes/comments.php:38
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: includes/comments.php:45
+msgid "Edit this comment"
+msgstr ""
+
+#: includes/shortcodes/portfolio_filter.php:56
+msgid "All"
+msgstr ""
+
+#: includes/shortcodes/recent_blog.php:69
+msgid "No Comments"
+msgstr ""
+
+#: includes/shortcodes/recent_blog.php:71
+msgid " Comments"
+msgstr ""
+
+#: includes/shortcodes/recent_blog.php:73
+msgid "1 Comment"
+msgstr ""
+
+#: includes/shortcodes/recent_blog.php:77
+msgid "Comments are off for this post."
+msgstr ""
+
+#: includes/shortcodes/recent_blog.php:83
+msgid "Read More..."
+msgstr ""
+
+#: includes/widgets/tweeter_widget.php:13
+msgid "Pixel Tweet"
+msgstr ""
+
+#: includes/widgets/tweeter_widget.php:14
+msgid "Latest Tweet"
+msgstr ""
+
+#: includes/widgets/tweeter_widget.php:54
+msgid "New title"
+msgstr ""
+
+#: includes/widgets/tweeter_widget.php:55
+msgid "@BenaissaGhrib"
+msgstr ""
+
+#: includes/widgets/tweeter_widget.php:59
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/tweeter_widget.php:63
+msgid "Tweeter Username:"
+msgstr ""
+
+#: includes/widgets/tweeter_widget.php:67
+msgid "Number of Tweete:"
+msgstr ""
+
+#: single-portfolio.php:143
+msgid "Related Works"
+msgstr ""
+
+#: single.php:144
+msgid "posted by "
+msgstr ""
+
+#: single.php:193
+msgid "Tags"
+msgstr ""
+
+#: tag.php:12
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""

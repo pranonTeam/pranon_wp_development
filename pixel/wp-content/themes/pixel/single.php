@@ -41,6 +41,13 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 	$img .= '</ul></div>';
 }
 
+if(AfterSetupTheme::pranon_return_thme_option('sidebar')){
+	$left = 'eleven';
+	$right ='five';
+}else{
+	$left = 'sixteen';
+	$right ='';
+}
 ?>
 <?php get_template_part ( 'menu-section' );?>
 <section class="blogSingle bgGrey ofsTop  tCenter">
@@ -65,7 +72,7 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 				<span class="metaCategory"><?php echo $cat;?></span>
 				<span class="metaDate"><a
 					href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))?>"> - <?php echo get_the_time(get_option( 'date_format' ));?> - </a></span>
-				<span class="metaComments"><a href="#comments"><?php comments_number('0  Comment', '1  Comment', '%  Comments' );?></a></span>
+				<span class="metaComments"><a href="#comments"><?php comments_number('0 '.__('Comment','pranon').'', '1 '.__('Comment','pranon').'','% '.__('Comment','pranon').'' );?></a></span>
 			</div>
 			<!--End post meta-->
 <?php if (get_the_excerpt()!='') {?>
@@ -79,14 +86,7 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 
 
 			<!--Projects share-->
-			<ul class="pSingleSocials margTMedium">
-				work on dynamic
-				<li><a href="#"><i class="icon-facebook"></i></a></li>
-				<li><a href="#"><i class="icon-linkedin"></i></a></li>
-				<li><a href="#"><i class="icon-twitter"></i></a></li>
-				<li><a href="#"><i class="icon-instagram"></i></a></li>
-
-			</ul>
+			<?php echo AfterSetupTheme::social_share(get_permalink());?>
 			<!--End project share-->
 
 
@@ -123,7 +123,7 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 		<!--Container-->
 		<div class="container clearfix">
 
-			<div class="eleven columns">
+			<div class="<?php echo esc_attr($left)?> columns">
 				<!--Blog single details inner-->
 				<div class="pSingleDetailsInner tLeft  margMTop">
 
@@ -177,13 +177,13 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 						</div>
 						<?php }?>
 						<?php
-				echo get_the_content ();
+				echo the_content();
 				wp_link_pages ( array (
-						'before' => '<div class="page-links"><span class="page-links-title">' . __ ( 'Pages:', 'gilas' ) . '</span>',
+						'before' => '<div class="page-links"><span class="page-links-title">' . __ ( 'Pages:', 'pranon' ) . '</span>',
 						'after' => '</div>',
 						'link_before' => '<span>',
 						'link_after' => '</span>',
-						'pagelink' => '<span class="screen-reader-text">' . __ ( 'Page', 'gilas' ) . ' </span>%',
+						'pagelink' => '<span class="screen-reader-text">' . __ ( 'Page', 'pranon' ) . ' </span>%',
 						'separator' => '<span class="screen-reader-text">, </span>' 
 				) );
 				?>
@@ -218,8 +218,9 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 
 		endif;
 		?>
-
-<div class="five columns sidebar tLeft margMTop"><?php get_sidebar()?></div>
+<?php if($right!=''){?>
+<div class="<?php echo esc_attr($right)?> columns sidebar tLeft margMTop"><?php get_sidebar()?></div>
+<?php }?>
 		</div>
 		<!--End container-->
 	</div>

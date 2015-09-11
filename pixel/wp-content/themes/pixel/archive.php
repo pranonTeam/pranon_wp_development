@@ -3,8 +3,11 @@ defined ( 'ABSPATH' ) or die ( "No script kiddies please!" );
 
 get_header ();
 ?>
-<?php get_template_part ( 'menu-section' );?>
-<section class="headerSingle hSingleHeight overlay tCenter" style="background-image: url('<?php echo get_template_directory_uri()?>/images/teaserImages/r1.jpg');">
+<?php get_template_part ( 'menu-section' );
+
+$content_bg = esc_url (AfterSetupTheme::pranon_return_thme_option('archive-single-parallax','url') ) != null ? esc_url (AfterSetupTheme::pranon_return_thme_option('archive-single-parallax','url') ) : get_template_directory_uri().'/images/teaserImages/r1.jpg';
+?>
+<section class="headerSingle hSingleHeight overlay tCenter" style="background-image: url('<?php echo esc_url($content_bg)?>');">
 	<!--Hero-->
 	<div class="hero">
 		<!--Title-->

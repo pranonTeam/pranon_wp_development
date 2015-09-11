@@ -25,12 +25,23 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 			} else {
 				$para_html = '';
 			}
+			
+			if($what_we_do_heading!=''){
+				$heading = '<div class="title dark">
+									<h1>' . esc_html ( $what_we_do_heading ) . '<span class="plus">+</span></h1>
+								</div>';
+			}else{
+				$heading = '';
+				$para_html = '<div class="smallIntro tCenter">
+										' . wpb_js_remove_wpautop ( $content, true ) . '
+													</div>';
+			}
 			$html = '<div class="expertiseHolder margLTop">
 					<div class="clearfix ofsBottom">
-								<div class="title dark">
-									<h1>' . esc_html ( $what_we_do_heading ) . '<span class="plus">+</span></h1>
-								</div>
+								'.$heading.'
+											<div class="container clearfix">
 											' . $para_html . '
+													</div>
 				    </div></div>';
 			return $html;
 		}

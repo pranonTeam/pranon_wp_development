@@ -3,8 +3,8 @@ Contributors: ankitpokhrel, cfoellmann
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J9FVY3ESPPD58
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.5
-Tested up to: 4.2
-Stable tag: 3.5.0
+Tested up to: 4.3
+Stable tag: 3.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -114,6 +114,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 3.5.1 =
+* Minor code refactorings.
+
 = 3.5.0 =
 * Unit Tests.
 * Added support for github updater. Issue #44
@@ -203,6 +206,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+= 3.5.1 =
+* Minor code refactorings.
+
 = 3.5.0 =
 * Unit tests and bug fixes.
 

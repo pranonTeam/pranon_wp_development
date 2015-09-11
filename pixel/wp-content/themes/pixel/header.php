@@ -17,7 +17,8 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
+<link rel="shortcut icon"
+	href="<?php echo esc_url(AfterSetupTheme::pranon_return_thme_option('favicon','url'));?>" />
 <!-- The favicon -->
 <!--[if IE 7]>
 <link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->

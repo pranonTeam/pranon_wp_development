@@ -58,14 +58,7 @@ if (class_exists ( 'Dynamic_Featured_Image' )) {
 <?php }?>
 
 		<!--Projects share-->
-		<ul class="projSocials margTMedium ">
-
-			<li><a href="#"><i class="icon-facebook"></i></a></li>
-			<li><a href="#"><i class="icon-linkedin"></i></a></li>
-			<li><a href="#"><i class="icon-twitter"></i></a></li>
-			<li><a href="#"><i class="icon-instagram"></i></a></li>
-
-		</ul>
+		<?php echo AfterSetupTheme::social_share(get_permalink());?>
 		<!--End project share-->
 
 

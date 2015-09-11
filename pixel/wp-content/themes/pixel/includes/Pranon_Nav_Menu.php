@@ -84,6 +84,22 @@ class Pranon_Nav_Menu extends Walker_Nav_Menu {
 				
 				$output .= apply_filters ( 'walker_nav_menu_start_el', $object_output, $object, $depth, $args );
 			}
+			
+			if(is_woocommerce()){
+					echo "okokokoko";
+				 global $woocommerce;
+				 // get cart quantity
+				$qty = $woocommerce->cart->get_cart_contents_count();
+
+				// get cart total
+				$total = $woocommerce->cart->get_cart_total();
+
+				// get cart url
+				$cart_url = $woocommerce->cart->get_cart_url();
+				 $object_output .= $indent . '<li id="multi-menu-item-' . $object->ID . '"' . $value . ' class="cart"><a href="'.esc_url($cart_url).'"><i class="icon-basket"></i><span class="count woocommerce">'.esc_html($qty).'</span></a>';
+			 }else{
+				 echo "else";
+			 }
 		} 
 
 		else {
@@ -91,9 +107,26 @@ class Pranon_Nav_Menu extends Walker_Nav_Menu {
 			if (strpos ( $class_names, 'menu-item-has-children' ) !== false) {
 				$output .= $indent . '<li id="multi-menu-item-' . $object->ID . '" > ';
 				$dropdown_value = 1;
-			} else {
+			}elseif(strpos ( $class_names, 'cart_symbol' ) !== false && class_exists('Woocommerce')){
+				
+				 global $woocommerce;
+				 // get cart quantity
+				$qty = $woocommerce->cart->get_cart_contents_count();
+
+				// get cart total
+				$total = $woocommerce->cart->get_cart_total();
+
+				// get cart url
+				$cart_url = $woocommerce->cart->get_cart_url();
+				
+				$output .= $indent . '<li class="cart">';
+				$dropdown_value = 0;
+			
+			}
+			else {
 				$output .= $indent . '<li id="multi-menu-item-' . $object->ID . '"' . $value . ' class="'.$icon_class.'">';
 				$dropdown_value = 0;
+				$qty =0;
 			}
 			$atts = array ();
 			$atts ['title'] = ! empty ( $object->attr_title ) ? $object->attr_title : '';
@@ -132,6 +165,7 @@ class Pranon_Nav_Menu extends Walker_Nav_Menu {
 			
 			$object_output = $args->before;
 			if ($dropdown_value == 0) {
+				
 				if (strpos ( $class_names, 'icon' ) !== false) {
 					$object_output .= '<a' . $attributes . ' target="_blank">';
 					/**
@@ -139,7 +173,15 @@ class Pranon_Nav_Menu extends Walker_Nav_Menu {
 					 */
 					$object_output .= '<i class="icon ' . $classes [0].' '.$classes[1] . '"></i>';
 					$object_output .= '</a>';
-				} else {
+				}elseif(strpos ( $class_names, 'cart_symbol' ) !== false){
+					$object_output .= '<a' . $attributes . '>';
+					/**
+					 * This filter is documented in wp-includes/post-template.php
+					 */
+					$object_output .= '<i class="icon-basket"></i><span class="count woocommerce" id="wc_cart">'.esc_html( $qty).'</span>';
+					$object_output .= '</a>';
+				}
+				else {
 					$object_output .= '<a' . $attributes . '>';
 					/**
 					 * This filter is documented in wp-includes/post-template.php
@@ -175,6 +217,8 @@ class Pranon_Nav_Menu extends Walker_Nav_Menu {
 			 * @param array $args
 			 *        	An array of arguments. @see wp_nav_menu()
 			 */
+			 
+
 			$output .= apply_filters ( 'walker_nav_menu_start_el', $object_output, $object, $depth, $args );
 		}
 	}

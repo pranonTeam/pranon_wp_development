@@ -61,7 +61,7 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 												</div>
 											<div class="planBody">
 												' . $plan . '
-												<div class="planBtn ofsTMedium ofsBMedium">
+												<div class="planBtn ofsTMedium ofsBMedium ' . esc_attr ( $highlight ) . '">
 													<a class="btn" href="' . esc_url ( $sign_up_button_url ) . '">' . esc_html ( $sign_up_button_text ) . '</a>
 												</div>
 											</div>
@@ -86,7 +86,7 @@ if (class_exists ( 'WPBakeryShortCode' )) {
 													</div>
 											<div class="planBodyAlt">
 												' . $plan . '
-												<div class="planBtn ofsTMedium ofsBMedium">
+												<div class="planBtn ofsTMedium ofsBMedium ' . esc_attr ( $highlight ) . '">
 													<a class="btn" href="' . esc_url ( $sign_up_button_url ) . '">' . esc_html ( $sign_up_button_text ) . '</a>
 												</div>
 											</div>

@@ -19,8 +19,6 @@ get_template_part ( 'menu-section' );?>
 		<!--End title-->
 	</div>
 	<!--End hero-->
-
-
 </section>
 <!--End header single-->
 <section class="blogLarge tCenter bgWhite">
@@ -60,11 +58,11 @@ get_template_part ( 'menu-section' );?>
 		<?php
 		if (is_search ()) {
 		} else {
-			comment_form ();
-			the_tags ();
-			wp_list_comments ();
-			comments_template ();
-			wp_link_pages ( array (
+			comment_form();
+			the_tags();
+			wp_list_comments();
+			comments_template();
+			wp_link_pages( array (
 					'before' => '<div class="page-links"><span class="page-links-title">' . __ ( 'Pages:', 'bautySpa' ) . '</span>',
 					'after' => '</div>',
 					'link_before' => '<span>',

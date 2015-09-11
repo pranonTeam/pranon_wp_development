@@ -19,22 +19,23 @@ https://github.com/themattharris/tmhOAuth
  */
 
 if(empty($_POST)) { die(); }
-/* define ( 'WP_USE_THEMES', false );
-require_once ("../../../../../wp-load.php"); */
+define ( 'WP_USE_THEMES', false );
+require_once ("../../../../wp-load.php");
+require_once '../includes/AfterSetupTheme.php';
 class ezTweet {
     /*************************************** config ***************************************/
 
     // Your Twitter App Consumer Key
-    private $consumer_key    = 'hr9u8b9r3L4qtFJARiqy1Q';
+    private $consumer_key    = '';
 
     // Your Twitter App Consumer Secret
-    private $consumer_secret = 'JSjk2FYbuKiHCBBOeTTOYWn0PQKoG95DCwGuZXAM3ck';
+    private $consumer_secret = '';
 
     // Your Twitter App Access Token
-    private $user_token      = '61731027-sN5tQpAcCLyshEubzKYWBtNc3uXHlrrKDUfs7Likf';
+    private $user_token      = '';
 
     // Your Twitter App Access Token Secret
-    private $user_secret     = 'sKEYCI5fYHzrzBNQE43BZBlELZiImhgpOGYOtovkc';
+    private $user_secret     = '';
 
     // Path to tmhOAuth libraries
     private $lib             = './lib/';
@@ -58,7 +59,7 @@ class ezTweet {
         $this->pathify($this->cache_dir);
         $this->pathify($this->lib);
         $this->message = '';
-
+       
         // Set server-side debug params
         if($this->debug === true) {
             error_reporting(-1);
@@ -68,6 +69,7 @@ class ezTweet {
     }
 
     public function fetch() {
+    	
         echo json_encode(
             array(
                 'response' => json_decode($this->getJSON(), true),
@@ -143,10 +145,10 @@ class ezTweet {
         require $this->lib.'tmhUtilities.php';
 
         $tmhOAuth = new tmhOAuth(array(
-            'consumer_key'          => $this->consumer_key,
-            'consumer_secret'       => $this->consumer_secret,
-            'user_token'            => $this->user_token,
-            'user_secret'           => $this->user_secret,
+            'consumer_key'          => AfterSetupTheme::pranon_return_thme_option ( 'tweet-consumer-key' ),
+            'consumer_secret'       => AfterSetupTheme::pranon_return_thme_option ( 'tweet-consumer-secret' ),
+            'user_token'            => AfterSetupTheme::pranon_return_thme_option ( 'tweet-access-token' ),
+            'user_secret'           => AfterSetupTheme::pranon_return_thme_option ( 'tweet-access-secret' ),
             'curl_ssl_verifypeer'   => false
         ));
 

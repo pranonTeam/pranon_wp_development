@@ -4,9 +4,14 @@ defined ( 'ABSPATH' ) or die ( "No script kiddies please!" );
  * Template Name: Pixel Blog Page
  */
 get_header ();
-get_template_part ( 'menu-section' );?>
+get_template_part ( 'menu-section' );
+$post_thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+$src = wp_get_attachment_image_src ( $post_thumbnail_id, 'full' );
+
+$content_bg = esc_url ($src[0] ) != null ? esc_url($src[0]) : get_template_directory_uri().'/images/teaserImages/r1.jpg';
+?>
 <!--Header single-->
-<section class="headerSingle hSingleHeight overlay tCenter" style="background-image: url('<?php echo get_template_directory_uri()?>/images/teaserImages/r1.jpg');">
+<section class="headerSingle hSingleHeight overlay tCenter" style="background-image: url('<?php echo esc_url($content_bg);?>');">
 
 	<!--Hero-->
 	<div class="hero">

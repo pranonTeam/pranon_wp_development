@@ -12,6 +12,25 @@ class AfterSetupTheme {
 				'gallery' 
 		) );
 		
+		if (class_exists ( 'woocommerce' )) {
+			add_theme_support ( 'woocommerce' );
+			//add_filter ( 'pranon_products_column_change', 'pranonWooCommerce::pranon_pranon_products_column_change' );
+			add_filter( 'loop_shop_per_page', create_function( '$cols', 'return '.self::pranon_return_thme_option('number-of-product').';' ), 20 );
+			
+			/**
+			 * ******** ================ CART TABLE ================= ***************
+			 */
+			add_action ( 'woocommerce_before_cart', 'pranonWooCommerce::pranon_woocommerce_before_cart' );
+			add_action ( 'woocommerce_after_cart', 'pranonWooCommerce::pranon_woocommerce_after_cart' );
+			add_action ( 'woocommerce_before_cart_table', 'pranonWooCommerce::pranon_woocommerce_before_cart_table' );
+			add_action ( 'woocommerce_after_cart_table', 'pranonWooCommerce::pranon_woocommerce_after_cart_table' );
+			/**
+			 * ********** ================ CHECK OUT ==========********************
+			 */
+			add_action ( 'woocommerce_checkout_before_order_review', 'pranonWooCommerce::pranon_woocommerce_checkout_before_order_review' );
+			add_action ( 'woocommerce_checkout_after_order_review', 'pranonWooCommerce::pranon_woocommerce_checkout_after_order_review' );
+		}
+		
 		add_theme_support ( 'post-thumbnails' );
 		add_theme_support ( 'automatic-feed-links' );
 		add_theme_support ( "title-tag" );
@@ -33,13 +52,16 @@ class AfterSetupTheme {
 		
 		if (! isset ( $content_width ))
 			$content_width = 900;
+			
+			/* =========== LANGUAGE FILE */
+		load_theme_textdomain ( 'pranon', get_template_directory () . '/languages' );
 		
 		/**
 		 * ******** Enque script *********
 		 */
 		add_action ( 'wp_enqueue_scripts', 'IncludeCssJs::pranon_add_css_js' );
 		add_action ( 'admin_enqueue_scripts', 'IncludeCssJs::pranon_add_admin_css_js' );
-		//add_action( 'publish_post', 'AfterSetupTheme::post_published_notification', 10, 2 );
+		// add_action( 'publish_post', 'AfterSetupTheme::post_published_notification', 10, 2 );
 		// add_action ( "wp_ajax_pranon_get_custom_post_type", "IncludeCssJs::pranon_get_custom_post_type" );
 		// add_action ( "wp_ajax_nopriv_pranon_get_custom_post_type", "IncludeCssJs::pranon_must_login" );
 		
@@ -53,7 +75,7 @@ class AfterSetupTheme {
 		 */
 		add_action ( 'widgets_init', 'CreateSidebar::pranon_custom_sidebar' );
 		add_action ( 'widgets_init', 'CreateSidebar::pranon_footer_sidebar' );
-		add_action( 'widgets_init', 'CreateSidebar::pranon_tweet_widget' );
+		add_action ( 'widgets_init', 'CreateSidebar::pranon_tweet_widget' );
 		
 		/**
 		 * ************* CUSTOM POST TYPE ************
@@ -76,14 +98,15 @@ class AfterSetupTheme {
 		/**
 		 * ******* SHORTCODE INITIALIZE ***********
 		 */
-		//add_action ( 'init', 'Shortcode_generator::pranon_register_shortcode' );
+		// add_action ( 'init', 'Shortcode_generator::pranon_register_shortcode' );
 		/* add_filter( 'vc_grid_item_shortcodes', 'Visual_Composer::my_module_add_grid_shortcodes' ); */
-		add_action( 'vc_before_init', 'Visual_Composer::add_shortcode_to_VC' );
-		add_shortcode_param( 'pranon_custom_taxonomy', 'Visual_Composer::pranon_param_settings_field' );
-		/* if (class_exists ( 'WPBakeryShortCode' )) {
-			$dir = get_stylesheet_directory() . '/vc_templates';
-			vc_set_shortcodes_templates_dir( $dir );
-		} */
+		
+		if (class_exists ( 'WPBakeryShortCode' )) {
+			// $dir = get_stylesheet_directory() . '/vc_templates';
+			// vc_set_shortcodes_templates_dir( $dir );
+			add_action ( 'vc_before_init', 'Visual_Composer::add_shortcode_to_VC' );
+			add_shortcode_param ( 'pranon_custom_taxonomy', 'Visual_Composer::pranon_param_settings_field' );
+		}
 		/**
 		 * ************** ADMIN INITIALIZE **********
 		 */
@@ -150,11 +173,11 @@ class AfterSetupTheme {
 		return $contactmethods;
 	}
 	static function pranon_return_thme_option($string, $str = null) {
-		global $beauty_demo;
+		global $pranon_demo;
 		if ($str != null)
-			return isset ( $beauty_demo ['' . $string . ''] ['' . $str . ''] ) ? $beauty_demo ['' . $string . ''] ['' . $str . ''] : null;
+			return isset ( $pranon_demo ['' . $string . ''] ['' . $str . ''] ) ? $pranon_demo ['' . $string . ''] ['' . $str . ''] : null;
 		else
-			return isset ( $beauty_demo ['' . $string . ''] ) ? $beauty_demo ['' . $string . ''] : null;
+			return isset ( $pranon_demo ['' . $string . ''] ) ? $pranon_demo ['' . $string . ''] : null;
 	}
 	
 	/* ============= WP TITLE CUSTOMIZATION =============== */
@@ -201,7 +224,7 @@ class AfterSetupTheme {
 		$count = count ( $getTerms );
 		if ($count != 0) {
 			foreach ( $getTerms as $key => $value ) {
-				$link = is_wp_error ( get_term_link ( $value->slug ) ) ? '#' : get_term_link ( $value->slug );
+				$link = is_wp_error ( get_term_link ( $value->slug ) ) ? get_bloginfo( 'url' ).'/tag/'.$value->slug : get_term_link ( $value->slug );
 				if ($key == $count - 1) {
 					$terms .= ' <li><a href="' . $link . '">' . $value->name . '</a></li>';
 				} else {
@@ -415,7 +438,7 @@ class AfterSetupTheme {
 			} else if (get_query_var ( 'paged' )) {
 				
 				// Paginated archives
-				echo '<li class="item-current item-current-' . get_query_var ( 'paged' ) . '"><a class="bread-current bread-current-' . get_query_var ( 'paged' ) . '" title="Page ' . get_query_var ( 'paged' ) . '" href="#">' . __ ( 'Page' ) . ' ' . get_query_var ( 'paged' ) . '</a></li>';
+				echo '<li class="item-current item-current-' . get_query_var ( 'paged' ) . '"><a class="bread-current bread-current-' . get_query_var ( 'paged' ) . '" title="Page ' . get_query_var ( 'paged' ) . '" href="#">' . __ ( 'Page', 'pranon' ) . ' ' . get_query_var ( 'paged' ) . '</a></li>';
 			} else if (is_search ()) {
 				
 				// Search results page
@@ -423,7 +446,7 @@ class AfterSetupTheme {
 			} elseif (is_404 ()) {
 				
 				// 404 page
-				echo '<li><a href="#">' . esc_html__ ( 'Error 404', 'beautySpa' ) . '</a></li>';
+				echo '<li><a href="#">' . esc_html__ ( 'Error 404', 'pranon' ) . '</a></li>';
 			}
 		} else {
 			echo '<li><a href="#">' . $home_title . '</a></li>';
@@ -433,59 +456,80 @@ class AfterSetupTheme {
 	}
 	
 	/* ================= get next post link ============ */
-	
 	static function get_next_post_link($id) {
 		$args = array (
 				'posts_per_page' => - 1,
-				'offset'           => 0,
-				'category'         => '',
-				'category_name'    => '',
-				'orderby'          => 'date',
-				'order'            => 'DESC',
-				'include'          => '',
-				'exclude'          => '',
-				'meta_key'         => '',
-				'meta_value'       => '',
-				'post_type'        => 'post',
-				'post_mime_type'   => '',
-				'post_parent'      => '',
-				'author'	   => '',
-				'post_status'      => 'publish',
-				'suppress_filters' => true
+				'offset' => 0,
+				'category' => '',
+				'category_name' => '',
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'include' => '',
+				'exclude' => '',
+				'meta_key' => '',
+				'meta_value' => '',
+				'post_type' => 'post',
+				'post_mime_type' => '',
+				'post_parent' => '',
+				'author' => '',
+				'post_status' => 'publish',
+				'suppress_filters' => true 
 		);
 		$posts_array = get_posts ( $args );
-		self::$all_posts_id = array();
-		foreach ($posts_array as $key=>$single){
-			array_push(self::$all_posts_id, $single->ID);
+		self::$all_posts_id = array ();
+		foreach ( $posts_array as $key => $single ) {
+			array_push ( self::$all_posts_id, $single->ID );
 		}
-		
 		
 		$index = '';
 		$link = '<ul>';
-		$prev ='';
-		$next ='';
-		$count = count(self::$all_posts_id);
-		if (!empty ( self::$all_posts_id )) {
-			for ($i=0; $i<$count; $i++){
-				if (self::$all_posts_id[$i]==$id){
+		$prev = '';
+		$next = '';
+		$count = count ( self::$all_posts_id );
+		if (! empty ( self::$all_posts_id )) {
+			for($i = 0; $i < $count; $i ++) {
+				if (self::$all_posts_id [$i] == $id) {
 					$index = $i;
 					break;
 				}
 			}
-			if ($index == 0){
-				$prev = '<li class="prev"><a href="'.get_permalink(self::$all_posts_id[$count-1]).'"><i class="icon-left-open-big"></i></a></li>';
-				$next ='<li class="next"><a href="'.get_permalink(self::$all_posts_id[1]).'"><i class="icon-right-open-big"></i></a></li>';
-			}elseif ($index == ($count-1)){
-				$prev = '<li class="prev"><a href="'.get_permalink(self::$all_posts_id[$count-2]).'"><i class="icon-left-open-big"></i></a></li>';
-				$next ='<li class="next"><a href="'.get_permalink(self::$all_posts_id[0]).'"><i class="icon-right-open-big"></i></a></li>';
-			}else{
-				$prev = '<li class="prev"><a href="'.get_permalink(self::$all_posts_id[$index-1]).'"><i class="icon-left-open-big"></i></a></li>';
-				$next ='<li class="next"><a href="'.get_permalink(self::$all_posts_id[$index+1]).'"><i class="icon-right-open-big"></i></a></li>';
+			if ($index == 0) {
+				$prev = '<li class="prev"><a href="' . get_permalink ( self::$all_posts_id [$count - 1] ) . '"><i class="icon-left-open-big"></i></a></li>';
+				$next = '<li class="next"><a href="' . get_permalink ( self::$all_posts_id [1] ) . '"><i class="icon-right-open-big"></i></a></li>';
+			} elseif ($index == ($count - 1)) {
+				$prev = '<li class="prev"><a href="' . get_permalink ( self::$all_posts_id [$count - 2] ) . '"><i class="icon-left-open-big"></i></a></li>';
+				$next = '<li class="next"><a href="' . get_permalink ( self::$all_posts_id [0] ) . '"><i class="icon-right-open-big"></i></a></li>';
+			} else {
+				$prev = '<li class="prev"><a href="' . get_permalink ( self::$all_posts_id [$index - 1] ) . '"><i class="icon-left-open-big"></i></a></li>';
+				$next = '<li class="next"><a href="' . get_permalink ( self::$all_posts_id [$index + 1] ) . '"><i class="icon-right-open-big"></i></a></li>';
 			}
 		}
 		
-		$link .= $prev . '<li><a href="#"><i class="icon-layout"></i></a></li>'. $next;
-		$link .='</ul>';
+		$link .= $prev . '<li><a href="#"><i class="icon-layout"></i></a></li>' . $next;
+		$link .= '</ul>';
 		return $link;
+	}
+	static function social_share($current_link) {
+		$share_links = array (
+				'icon-facebook' => 'https://www.facebook.com/sharer/sharer.php?u=',
+				'icon-twitter' => 'https://twitter.com/home?status=',
+				'icon-linkedin' => 'https://www.linkedin.com/shareArticle?mini=true&url=',
+				'icon-gplus' => 'https://plus.google.com/share?url=' 
+		);
+		if (self::pranon_return_thme_option ( 'opt-required-nested' )) {
+			$given = (self::pranon_return_thme_option ( 'social-share' ));
+			$html = '<ul class="pSingleSocials margTMedium">';
+			if (isset ( $given )) {
+				foreach ( $given as $key => $link ) {
+					if($link!=null){
+						$html .= '<li><a href="' . $share_links[$key] . $current_link . '" target="_blank"><i class="' . $key . '"></i></a></li>';
+					}
+				}
+			}
+			$html .= '</ul>';
+			return $html;
+		} else {
+			return '';
+		}
 	}
 }

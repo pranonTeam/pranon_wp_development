@@ -56,15 +56,15 @@ class Tweeter_Widget extends WP_Widget {
 		$number_of_tweets = ! empty( $instance['number_of_tweets'] ) ? $instance['number_of_tweets'] : 5;
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:','pranon' ); ?></label> 
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'username' ); ?>"><?php _e( 'Tweeter Username:' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'username' ); ?>"><?php _e( 'Tweeter Username:','pranon' ); ?></label> 
 		<input class="widefat" id="<?php echo $this->get_field_id( 'username' ); ?>" name="<?php echo $this->get_field_name( 'username' ); ?>" type="text" value="<?php echo esc_attr( $username ); ?>">
 		</p>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'number_of_tweets' ); ?>"><?php _e( 'Number of Tweete:' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'number_of_tweets' ); ?>"><?php _e( 'Number of Tweete:', 'pranon' ); ?></label> 
 		<input class="widefat" id="<?php echo $this->get_field_id( 'number_of_tweets' ); ?>" name="<?php echo $this->get_field_name( 'number_of_tweets' ); ?>" type="text" value="<?php echo esc_attr( $number_of_tweets ); ?>">
 		</p>
 		<?php 

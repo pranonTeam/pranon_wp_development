@@ -5,8 +5,8 @@
  * Used for both single and index/archive/search.
  *
  * @package WordPress
- * @subpackage gilas
- * @since gilas
+ * @subpackage pranon
+ * @since pranon
  */
 $getCat = get_the_category ( get_the_ID () );
 $cat = '';
@@ -35,7 +35,7 @@ foreach ( $getCat as $key => $value ) {
 					<span class="metaCategory"><?php echo $cat;?></span> <span
 						class="metaDate"><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))?>"> - <?php echo get_the_time(get_option( 'date_format' ));?> - </a></span>
 					<span class="metaComments"><a
-						href="<?php echo get_permalink()?>#comments"><?php comments_number('0  Comment', '1  Comment', '%  Comments' );?></a></span>
+						href="<?php echo get_permalink()?>#comments"><?php comments_number('0 '.__('Comment','pranon').'', '1 '.__('Comment','pranon').'','% '.__('Comment','pranon').'' );?></a></span>
 				</div>
 				<!--End post meta-->
 
@@ -57,18 +57,18 @@ foreach ( $getCat as $key => $value ) {
 					<p>  <?php if (get_the_excerpt()!=''){ echo get_the_excerpt();} else the_content();?></p>
                         <?php
 																								wp_link_pages ( array (
-																										'before' => '<div class="page-links"><span class="page-links-title">' . __ ( 'Pages:', 'gilas' ) . '</span>',
+																										'before' => '<div class="page-links"><span class="page-links-title">' . __ ( 'Pages:', 'pranon' ) . '</span>',
 																										'after' => '</div>',
 																										'link_before' => '<span>',
 																										'link_after' => '</span>',
-																										'pagelink' => '<span class="screen-reader-text">' . __ ( 'Page', 'gilas' ) . ' </span>%',
+																										'pagelink' => '<span class="screen-reader-text">' . __ ( 'Page', 'pranon' ) . ' </span>%',
 																										'separator' => '<span class="screen-reader-text">, </span>' 
 																								) );
 																								?>			
                         </div>
 			</div>
-			<a class="btn border more" href="<?php echo get_permalink()?>"><?php esc_html_e('Read more ... ','gilas')?></a>
-			<footer class="entry-footer"> <?php edit_post_link( __( 'Edit', 'gilas' ), '<span class="edit-link">', '</span>' ); ?>
+			<a class="btn border more" href="<?php echo get_permalink()?>"><?php esc_html_e('Read more ... ','pranon')?></a>
+			<footer class="entry-footer"> <?php edit_post_link( __( 'Edit', 'pranon' ), '<span class="edit-link">', '</span>' ); ?>
 </footer>
 		</div>
 		<!--End post content-->

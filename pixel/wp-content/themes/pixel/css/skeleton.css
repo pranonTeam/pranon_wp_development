@@ -24,7 +24,7 @@
     .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
     .container .column,
 	.columns, 
-    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .container .columns                         { float: left; display: inline; margin-left: 10px!important; margin-right: 10px!important; }
     .row                                        { margin-bottom: 20px; }
 
     /* Nested Column Classes */
@@ -37,7 +37,7 @@
 	.one.columns                                { width: 40px;  }
     .container .two.columns                     { width: 100px; }
     .container .three.columns                   { width: 160px; }
-    .container .four.columns                    { width: 220px; }
+    .container .four.columns                    { width: 220px!important; }
     .container .five.columns                    { width: 280px; }
     .container .six.columns                     { width: 340px; }
     .container .seven.columns                   { width: 400px; }
@@ -51,7 +51,7 @@
     .container .fifteen.columns                 { width: 880px; }
     .container .sixteen.columns                 { width: 940px; }
 
-    .container .one-third.column                { width: 300px; }
+    .container .one-third.column                { width: 300px!important; }
     .container .two-thirds.column               { width: 620px; }
 
     /* Offsets */
